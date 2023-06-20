@@ -1,11 +1,13 @@
-import React from "react";
+"use client";
 
-function Contact() {
+import React from "react";
+import ContactForm from "../components/ContactForm";
+
+export default function Contact() {
   return (
     <div>
-      <h1>Contact Page</h1>
+      <h1></h1>
+      <ContactForm />
     </div>
   );
 }
-
-export default Contact;
