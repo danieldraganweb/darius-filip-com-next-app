@@ -1,63 +1,99 @@
-.main{
-    width: 100vw;
-    height: 15vh;
-    max-width: 1250px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffffff;
+
+@import './app/styles/_variables';
+
+
+
+.navbar {
+    font-family: $primary-font;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: 0 5%;
+    align-items: center;
+    padding: 1rem;
+    width: 100vh;
+    width: 100vw;
+    max-width: 1250px;
+    margin: 0 auto;
+    .a{
+        text-decoration: none;
+        color: #333;
+    }
+  .burgerMenu {
+    display: none;
+  }
+  .logo {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
     position: relative;
-    top: 0;
-    z-index: 100;
-    border: 2px solid #000;
-    .logo{
-        width: 20vw;
-        height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        
+    text-decoration: none;
+    font-family: $primary-font;
+    color: $primary-text-color  ;
+  }
+  .navLinks {
+    font-family: $primary-font;
+    display: flex;
+    list-style-type: none;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 400;
+    li {
+      margin-left: 2rem;
     }
-    .grid{
-        width: 80%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .grid-item{
-            width: 20%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            a{
-                text-decoration: none;
-                color: #fff;
-                font-size: 1.5rem;
-                font-weight: 600;
-                &:hover{
-                    color: #ccc;
-                }
-            }
-        }
-        .link{
-            width: 20%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            a{
-                text-decoration: none;
-                color: #fff;
-                font-size: 1.5rem;
-                font-weight: 600;
-                &:hover{
-                    color: #ccc;
-                }
-            }
-        }
+    a{
+        font-family: $primary-font;
+        text-decoration: none;
+        color: #333;
     }
+  }
+  .instagramSVG {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #333;
+    text-decoration: none;
+  }
 }
+ // media queries
+
+ @media (max-width: 1250px) {
+    .navbar{font-size: 1.7rem;
+    }
+    .logo {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar{font-size: 1.7rem;
+    }
+    .logo {
+      font-size: 1.8rem;
+    }
+    .burgerMenu {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .navbar{font-size: 1.7rem;
+    }
+    .logo {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .navbar{font-size: 1.7rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+    }
+    .burgerMenu {
+        font-size: 1.5rem;
+        display: flex;
+
+
+    }
+  }

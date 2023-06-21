@@ -1,32 +1,50 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/Navbar.module.scss";
+import InstagramSVG from "./InstagramSVG";
 
-function Navbar() {
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div className={styles.main}>
-      <div className={styles.grid}>
-        <div className={styles.logo}>
-          <Link href="/">DARIUS FILIP</Link>
-        </div>
-        <Link href="/series" className={styles.link}>
-          Series
-        </Link>
-        <Link href="/recent" className={styles.link}>
-          Recent
-        </Link>
-        <Link href="/contact" className={styles.link}>
-          Contact
-        </Link>
-        <Link href="/about" className={styles.link}>
-          About
-        </Link>
-        <Link href="/bookshop" className={styles.link}>
-          Bookshop
-        </Link>
-      </div>
-    </div>
+    <header className={styles.navbar}>
+      <Link href="/" className={styles.logo}>
+        DARIUS FILIP
+      </Link>
+      <button className={styles.burgerMenu} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
+        <li>
+          <InstagramSVG />
+        </li>
+        <li>
+          <Link href="/series">Series.</Link>
+        </li>
+        <li>
+          <Link href="/recent">Recent.</Link>
+        </li>
+        <li>
+          <Link href="/contact">Contact.</Link>
+        </li>
+        <li>
+          <Link href="/about">About.</Link>
+        </li>
+        <li>
+          <Link href="/bookshop">Bookshop.</Link>
+        </li>
+      </ul>
+    </header>
   );
-}
+};
 
 export default Navbar;
