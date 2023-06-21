@@ -1,11 +1,12 @@
 .main{
     width: 100vw;
+    max-width: 1500px;
     height: 15vh;
-    max-width: 1250px;
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
@@ -13,6 +14,7 @@
     top: 0;
     z-index: 100;
     bottom: 0%;
+    gap: 0.1rem;
     
     .copyright{
         width: 100%;
