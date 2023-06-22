@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import styles from "../styles/Banner.module.scss";
+import styles from "../styles/components/Banner.module.scss";
 
 function BannerImage() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import styles from "../styles/Navbar.module.scss";
+import styles from "../styles/components/Navbar.module.scss";
 import InstagramSVG from "./InstagramSVG";
 
 const Navbar = () => {
@@ -25,9 +25,6 @@ const Navbar = () => {
       </button>
       <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
         <li>
-          <InstagramSVG />
-        </li>
-        <li>
           <Link href="/series">Series.</Link>
         </li>
         <li>
@@ -43,6 +40,7 @@ const Navbar = () => {
           <Link href="/bookshop">Bookshop.</Link>
         </li>
       </ul>
+      <InstagramSVG />
     </header>
   );
 };

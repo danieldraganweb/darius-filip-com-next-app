@@ -1,4 +1,4 @@
-import styles from "../styles/Footer.module.scss";
+import styles from "../styles/components/Footer.module.scss";
 import InstagramSVG from "./InstagramSVG";
 
 function Footer() {

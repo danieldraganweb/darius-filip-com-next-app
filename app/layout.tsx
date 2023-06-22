@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Darius Filip",
-  description: "Daris Filip personal website",
+  description: "Daris Filip Photography",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        {children}
+        <main> {children}</main>
         <Footer />
       </body>
     </html>

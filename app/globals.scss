@@ -1,15 +1,34 @@
-.main {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6rem;
-    min-height: 100vh;
-    border: 2px solid black;
-    box-sizing: border-box;
-    max-width: 100vw;
-    margin-left: auto;
-    margin-right: auto;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+// Typography
+$primary-font: 'Inter', sans-serif;
+
+body {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+// Colors
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+
+// Breakpoints
+$screen-sm-min: 640px;
+$screen-md-min: 768px;
+$screen-lg-min: 1024px;
+$screen-xl-min: 1280px;
+$screen-xxl-min: 1536px;
+
