@@ -1,9 +1,14 @@
 .container {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    width: auto;
+    width: 100vw;
+    min-width: 100vw;
+   
     display: flex;
     flex-direction: column;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
+    
   }

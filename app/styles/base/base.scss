@@ -1,0 +1,26 @@
+
+:root {
+    /* Define CSS variables, if needed */
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  }
+  
+  html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: var(--font-family);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
