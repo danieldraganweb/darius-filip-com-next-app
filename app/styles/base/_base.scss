@@ -1,18 +1,13 @@
 
-:root {
-    /* Define CSS variables, if needed */
-    --primary-color: #ffffff;
-    --secondary-color: #000000;
-    --font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-  }
-  
-  html {
+  .html {
     font-size: 16px;
     line-height: 1.5;
     font-family: var(--font-family);
+    box-sizing: border-box;
+    border: 2px solid red;
   }
   
-  body {
+  .body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;

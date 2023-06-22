@@ -16,6 +16,7 @@ const Navbar = () => {
       <Link href="/" className={styles.logo}>
         DARIUS FILIP
       </Link>
+      <InstagramSVG />
       <button className={styles.burgerMenu} onClick={toggleMenu}>
         <span></span>
         <span></span>
@@ -40,7 +41,6 @@ const Navbar = () => {
           <Link href="/bookshop">Bookshop.</Link>
         </li>
       </ul>
-      <InstagramSVG />
     </header>
   );
 };
