@@ -8,8 +8,8 @@ function BannerImage() {
       <Image
         src={"/main-img-2.jpg"}
         alt="macarale"
-        width={300}
-        height={500}
+        width={370}
+        height={600}
         blurDataURL="/main-img-2.jpg"
         placeholder="blur"
         className="transition-opacity opacity-0 duration-[3s]"
