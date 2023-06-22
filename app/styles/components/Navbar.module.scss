@@ -17,7 +17,7 @@
     text-decoration: none;
     font-family: $primary-font;
     color: $primary-text-color;
-    padding-left: 1rem;
+    padding-left: 0.8rem;
   }
   .burgerMenu {
     display: flex;
@@ -25,7 +25,7 @@
     justify-content: space-around;
     align-items: center;
     width: 2.3rem;
-    height: auto;
+    height: 2rem;
     cursor: pointer;
     text-align: center;
     background-color: white;
@@ -67,70 +67,16 @@
       color: $primary-text-color;
     }
   }
-
   .instagramSVG {
-    font-size: 2rem;
-    margin-left: 2rem;
     color: #333;
     text-decoration: none;
     margin-right: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
-// .navbar {
-//     font-family: $primary-font;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     padding: 1rem;
-//     width: 100vh;
-//     width: 100vw;
-//     max-width: 1250px;
-//     min-width: 300px;
-//     margin-left: auto;
-//     margin-right: auto;
-    
-//     .a{
-//         text-decoration: none;
-//         color: #333;
-//     }
-//   .burgerMenu {
-//     display: flex;
-//   }
-//   .logo {
-//     margin: 0;
-//     font-size: 2.5rem;
-//     font-weight: 300;
-//     position: relative;
-//     text-decoration: none;
-//     font-family: $primary-font;
-//     color: $primary-text-color  ;
-//   }
-//   .navLinks {
-//     font-family: $primary-font;
-//     display: flex;
-//     list-style-type: none;
-//     transition: all 0.3s ease-in-out;
-//     text-decoration: none;
-//     text-decoration: none;
-//     color: #333;
-//     font-size: 1.8rem;
-//     font-weight: 400;
-//     li {
-//       margin-left: 2rem;
-//     }
-//     a{
-//         font-family: $primary-font;
-//         text-decoration: none;
-//         color: #333;
-//     }
-//   }
-//   .instagramSVG {
-//     font-size: 2rem;
-//     margin-left: 2rem;
-//     color: #333;
-//     text-decoration: none;
-//   }
-// }
+
  // media queries
 
 //  @media (min-width: 1250px) {

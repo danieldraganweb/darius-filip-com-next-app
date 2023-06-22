@@ -16,15 +16,22 @@ const Navbar = () => {
       <Link href="/" className={styles.logo}>
         DARIUS FILIP
       </Link>
-      <InstagramSVG />
+      <div className={styles.instagramSVG}>
+        <InstagramSVG />
+      </div>
       <button className={styles.burgerMenu} onClick={toggleMenu}>
+        Menu
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
+      <ul
+        className={`${styles.navLinks} ${
+          menuOpen ? styles.open : styles.closed
+        }`}
+      >
         <li>
           <Link href="/series">Series.</Link>
         </li>
