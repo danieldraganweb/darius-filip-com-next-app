@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/components/Navbar.module.scss";
 import InstagramSVG from "./InstagramSVG";
+import Header from "./Header";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,43 +13,46 @@ const Navbar = () => {
   };
 
   return (
-    <header className={styles.navbar}>
-      <Link href="/" className={styles.logo}>
-        DARIUS FILIP
-      </Link>
-      <div className={styles.instagramSVG}>
-        <InstagramSVG />
+    <>
+      <div className="container">
+        <nav className={styles.navbar}>
+          <div className={styles.instagramSVG}>
+            <Header />
+            <hr />
+            <InstagramSVG />
+          </div>
+          <button className={styles.burgerMenu} onClick={toggleMenu}>
+            Menu
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul
+            className={`${styles.navLinks} ${
+              menuOpen ? styles.open : styles.closed
+            }`}
+          >
+            <li>
+              <Link href="/series">Series.</Link>
+            </li>
+            <li>
+              <Link href="/recent">Recent.</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact.</Link>
+            </li>
+            <li>
+              <Link href="/about">About.</Link>
+            </li>
+            <li>
+              <Link href="/bookshop">Bookshop.</Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <button className={styles.burgerMenu} onClick={toggleMenu}>
-        Menu
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul
-        className={`${styles.navLinks} ${
-          menuOpen ? styles.open : styles.closed
-        }`}
-      >
-        <li>
-          <Link href="/series">Series.</Link>
-        </li>
-        <li>
-          <Link href="/recent">Recent.</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact.</Link>
-        </li>
-        <li>
-          <Link href="/about">About.</Link>
-        </li>
-        <li>
-          <Link href="/bookshop">Bookshop.</Link>
-        </li>
-      </ul>
-    </header>
+    </>
   );
 };
 

@@ -6,13 +6,12 @@ function BannerImage() {
   return (
     <div className={styles.container}>
       <Image
-        src={"/main-img-1.jpg"}
+        src={"/main-img-3.jpg"}
         alt="macarale"
-        width={970}
+        width={1100}
         height={700}
         blurDataURL="/main-img-1.jpg"
         placeholder="blur"
-        className="transition-opacity opacity-0 duration-[3s]"
         onLoadingComplete={(image) => {
           image.classList.remove("opacity-0");
         }}

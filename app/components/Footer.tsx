@@ -6,7 +6,10 @@ function Footer() {
     <>
       <div className={styles.main}>
         <p>&copy; All content Copyright</p>
-        <p className={styles.copyright}>2023 Darius Filip</p>
+        <p className={styles.copyright}>
+          <InstagramSVG /> <hr />
+          2023 Darius Filip
+        </p>
       </div>
     </>
   );
