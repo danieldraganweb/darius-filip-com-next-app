@@ -1,8 +1,12 @@
-$primary-font: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 $primary-text-color: #333;
+$secondary-text-color: #fff;
+
 $primary-color: #ffffff;
 $secondary-color: #2c3e50;
-
+$tertiary-color: #e74c3c;
+$quaternary-color: #3498db;
+$quinary-color: #f1c40f;
+$senary-color: #2ecc71;
 
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
@@ -10,3 +14,14 @@ $breakpoint-desktop: 1024px;
 $breakpoint-desktop-wide: 1280px;
 $breakpoint-desktop-ultra-wide: 1536px;
 $breakpoint-desktop-ultra-ultra-wide: 1920px;
+
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Montserrat Alternates', sans-serif;
+$tertiary-font: 'Montserrat Subrayada', sans-serif;
+
+$font-size-mobile: 1rem;
+$font-size-tablet: 1.2rem;
+$font-size-desktop: 1.4rem;
+$font-size-desktop-wide: 1.6rem;
+$font-size-desktop-ultra-wide: 1.8rem;
+$font-size-desktop-ultra-ultra-wide: 2rem;
