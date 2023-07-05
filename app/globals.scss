@@ -1,35 +1,38 @@
-@import 'base/_base';
-*,
-*::before,
-*::after {
+@import './base/variables';
+
+html {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  font-size: 62.5%; // This sets 1rem to be 10px
 }
 
-// Typography
-$primary-font: 'Inter', sans-serif;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: $primary-font;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 1.6rem; // This sets the base font-size to be 16px
+  line-height: 1.6;
   color: #333;
+  background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  margin-bottom: 1rem;
+  margin: 0;
+  font-weight: normal;
 }
 
-// Colors
-$primary-color: #ffffff;
-$secondary-color: #2c3e50;
+a {
+  color: inherit;
+  text-decoration: none;
 
-// Breakpoints
-$screen-sm-min: 640px;
-$screen-md-min: 768px;
-$screen-lg-min: 1024px;
-$screen-xl-min: 1280px;
-$screen-xxl-min: 1536px;
+  &:hover {
+    text-decoration: underline;
+  }
 
+  &:focus {
+    outline: 2px solid #000;
+  }
+}

@@ -1,30 +1,36 @@
-// Mixins
-@mixin sm {
-    @media (min-width: #{$screen-sm-min}) {
+@import '../base/variables';
+
+@mixin respond-to($media) {
+  @if $media == 'mobile' {
+    @media (min-width: #{$breakpoint-mobile}) {
       @content;
-    }
+    } 
   }
   
-  @mixin md {
-    @media (min-width: #{$screen-md-min}) {
+  @else if $media == 'tablet' {
+    @media (min-width: #{$breakpoint-tablet}) {
       @content;
-    }
+    } 
   }
   
-  @mixin lg {
-    @media (min-width: #{$screen-lg-min}) {
+  @else if $media == 'desktop' {
+    @media (min-width: #{$breakpoint-desktop}) {
       @content;
     }
   }
-  
-  @mixin xl {
-    @media (min-width: #{$screen-xl-min}) {
+  @else if $media == 'desktop-wide' {
+    @media (min-width: #{$breakpoint-desktop-wide}) {
       @content;
     }
   }
-  
-  @mixin xxl {
-    @media (min-width: #{$screen-xxl-min}) {
+  @else if $media == 'desktop-ultra-wide' {
+    @media (min-width: #{$breakpoint-desktop-ultra-wide}) {
       @content;
     }
   }
+  @else if $media == 'desktop-ultra-ultra-wide' {
+    @media (min-width: #{$breakpoint-desktop-ultra-ultra-wide}) {
+      @content;
+    }
+  }
+}

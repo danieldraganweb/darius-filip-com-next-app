@@ -1,0 +1,24 @@
+@import './variables';
+
+body {
+  font-size: $font-size-mobile;
+  
+  @media (min-width: $breakpoint-tablet) {
+    font-size: $font-size-tablet;
+  }
+  
+  @media (min-width: $breakpoint-desktop) {
+    font-size: $font-size-desktop;
+  }
+
+    @media (min-width: $breakpoint-desktop-wide) {
+    font-size: $font-size-desktop-wide;
+    }
+    @media (min-width: $breakpoint-desktop-ultra-wide) {
+        font-size: $font-size-desktop-ultra-wide;
+    }
+    @media (min-width: $breakpoint-desktop-ultra-ultra-wide) {
+        font-size: $font-size-desktop-ultra-ultra-wide;
+        
+    }
+}
