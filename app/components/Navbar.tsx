@@ -84,19 +84,29 @@ const Navbar = () => {
             }`}
           >
             <li>
-              <Link href="/series">Series.</Link>
+              <Link href="/series" onClick={() => setMenuOpen(false)}>
+                Series.
+              </Link>
             </li>
             <li>
-              <Link href="/recent">Recent.</Link>
+              <Link href="/recent" onClick={() => setMenuOpen(false)}>
+                Recent.
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact.</Link>
+              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+                Contact.
+              </Link>
             </li>
             <li>
-              <Link href="/about">About.</Link>
+              <Link href="/about" onClick={() => setMenuOpen(false)}>
+                About.
+              </Link>
             </li>
             <li>
-              <Link href="/bookshop">Bookshop.</Link>
+              <Link href="/bookshop" onClick={() => setMenuOpen(false)}>
+                Bookshop.
+              </Link>
             </li>
           </ul>
         </nav>
