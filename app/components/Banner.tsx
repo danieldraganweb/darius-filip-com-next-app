@@ -5,9 +5,9 @@ import { useState } from "react";
 
 function BannerImage() {
   const images = [
-    "/main-img-1.jpg",
+    // "/main-img-1.jpg",
     "/main-img-2.jpg",
-    "/main-img-3.jpg",
+    // "/main-img-3.jpg",
     "/main-img-4.jpg",
     "/main-img-5.jpg",
     "/main-img-6.jpg",
