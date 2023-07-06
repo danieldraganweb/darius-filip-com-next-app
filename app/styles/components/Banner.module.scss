@@ -2,7 +2,7 @@
 @use './app/styles/utils/_mixins' as _mixins;
 @use './app/styles/base/_base' as _base;
 
-.container {
+  .main {
     width: 100%;
     max-width: 1100px;
     display: flex;
@@ -11,12 +11,3 @@
     align-items: center;
     margin: 0 auto;
   }
-  // .main {
-  //   width: 100%;
-  //   max-width: 1100px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   margin: 0 auto;
-  // }

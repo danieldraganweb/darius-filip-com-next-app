@@ -14,11 +14,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.main}>
         <nav className={styles.navbar}>
-          <Header />
           <div className={styles.instagram}>
-            <InstagramSVG />
+            <Header />
           </div>
           <button className={styles.burgerMenu} onClick={toggleMenu}>
             Menu

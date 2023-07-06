@@ -7,7 +7,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // This sets 1rem to be 10px
+  font-size: 16px; // This sets 1rem to be 10px
+  height: 100vh;
 }
 
 *, *:before, *:after {
@@ -40,4 +41,9 @@ a {
   &:focus {
     outline: 2px solid _variables.$primary-color;
   }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }

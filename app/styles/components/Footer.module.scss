@@ -1,21 +1,36 @@
 @use './app/styles/base/_variables' as *;
 
-.main{
+.main {
     font-family: $primary-font;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     bottom: 0;
-    max-width: 100%;
+    padding-top: 3em;
+    padding-bottom: 3em;
     .copyright{
         display: flex;
         justify-content: center;
         align-items: center;
         p{
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 600;
-            color: $tertiary-color;
+            color: $primary-color;
         }
     }
+    @media screen and (max-width: 800px){
+        padding-top: 1em;
+    }
+    .copyright{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 3rem;
+            font-weight: 100;
+            color: $primary-color;
+        }
+    }
+
 }

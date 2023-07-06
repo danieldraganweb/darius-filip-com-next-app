@@ -12,13 +12,16 @@
   width: 100%;
   max-width: 1100px;
   flex-basis: 100%;
+  padding-bottom: 1em;
+  padding-top: 1em;
 
   .logo {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 300;
     text-decoration: none;
     font-family: $primary-font;
     color: $secondary-color;
+    align-items: center;
     
   }
   .burgerMenu {
@@ -38,10 +41,9 @@
     &.open {
       display: flex;
       flex-direction: column;
-      position: relative;
-      top: 100%;
-      background-color:$quaternary-color;
+      background-color:$primary-color;
       padding: 1rem;
+      position: relative;
 
       li {
         margin-bottom: 1rem;
@@ -55,10 +57,21 @@
       color: $primary-text-color;
     }
   }
+
+  .navLinks a:hover {
+    border-bottom: 2px solid $secondary-color;
+    padding-bottom: 0.2em;
+  }
+  .instagram{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
   .instagramSVG {
     color: #333;
     text-decoration: none;
-    margin-right: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +79,7 @@
   .instagramSVG:hover {
     color: $primary-color;
   }
-  @media screen and (max-width: 786px) {
+  @media screen and (max-width: 800px) {
     .burgerMenu {
       display: flex;
       flex-direction: column;
@@ -95,8 +108,5 @@
       font-size: $font-size-mobile;
     }
   }
-
- 
-
 }
 

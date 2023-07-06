@@ -4,21 +4,18 @@ import styles from "../styles/components/Banner.module.scss";
 
 function BannerImage() {
   return (
-    <div className={styles.container}>
+    <div className={styles.main}>
       <Image
-        src={"/main-img-2.jpg"}
+        src={"/main-img-3.jpg"}
         alt="macarale"
         quality={100}
-        width={300}
-        height={400}
+        width={1250}
+        height={500}
         style={{
-          maxWidth: "1100px",
-          padding: "0.5rem 0.5rem",
-          margin: "0 auto",
-          overflow: "hidden",
-          position: "relative",
+          maxWidth: "100%",
+          height: "auto",
         }}
-        blurDataURL="/main-img-1.jpg"
+        blurDataURL="/main-img-2.jpg"
         placeholder="blur"
         onLoadingComplete={(image) => {
           image.classList.remove("opacity-0");
