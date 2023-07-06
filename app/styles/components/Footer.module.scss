@@ -7,8 +7,14 @@
     justify-content: space-between;
     align-items: center;
     bottom: 0;
-    padding-top: 5em;
+    padding-top: 7em;
     padding-bottom: 3em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
     .copyright{
         display: flex;
         justify-content: center;

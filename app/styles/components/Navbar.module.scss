@@ -16,17 +16,22 @@
   padding-top: 1em;
 
   .logo {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 300;
+    display: flex;
     text-decoration: none;
     font-family: $primary-font;
     color: $secondary-color;
     align-items: center;
     
+    
   }
   .burgerMenu {
     display: none;
   }
+
+  .burgerMenuContainer {
+    display: none;
+  }
+
 
   .navLinks {
     display: flex;
@@ -44,6 +49,17 @@
       background-color:$primary-color;
       padding: 1rem;
       position: relative;
+      margin: 0 auto;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      font-size: $font-size-desktop;
 
       li {
         margin-bottom: 1rem;
@@ -55,35 +71,38 @@
     a {
       text-decoration: none;
       color: $primary-text-color;
+      margin: 0 auto;
+      display: flex;
     }
+    
   }
 
   .navLinks a:hover {
     border-bottom: 2px solid $secondary-color;
     padding-bottom: 0.2em;
   }
-  .instagram{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  .instagramSVG {
-    color: #333;
-    text-decoration: none;
-  }
-  .instagramSVG:hover {
-    color: $quaternary-color;
+
+  .InstagramSVG{
+    display: none;
   }
 
+
   @media screen and (max-width: 800px) {
+
+    .burgerMenuContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      flex-basis: 7%;
+      position:relative;
+    }
+
     .burgerMenu {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      width: 10%;
       cursor: pointer;
       text-align: center;
       background-color: white;
@@ -91,19 +110,67 @@
       padding: 0;
       font-size: 1rem;
       color: #000;
-
-      span {
-        width: 100%;
-        background-color: white;
-      }
     }
+    
     
     .navLinks {
       display: none;
     }
-    .logo{
+    &.open {
+      display: flex;
+      flex-direction: column;
+      background-color:$primary-color;
+      padding: 1rem;
+      position: absolute;
+      margin: 0 auto;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
       font-size: $font-size-mobile;
+
+      li {
+        margin-bottom: 1rem;
+        text-decoration: none;
+        list-style: none;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $primary-text-color;
+      text-align: center;
+    }
+    
+  }
+
+  .navLinks a:hover {
+    border-bottom: 2px solid $secondary-color;
+    padding-bottom: 0.2em;
+  }
+
+    .logo {
+      font-size: $font-size-desktop-ultra-ultra-wide;
+      text-decoration: none;
+    }
+    .InstagramSVG{
+      margin-left: 1em;
+      margin: 0 auto;
+      fill: $secondary-color;
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        fill: $primary-color;
+      }
+      a{
+        text-decoration: none;
+        color: $primary-text-color;
+        display: flex;
+      }
     }
   }
-}
 

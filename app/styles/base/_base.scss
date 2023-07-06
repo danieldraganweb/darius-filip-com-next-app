@@ -4,12 +4,13 @@
 .main {
   width: 100%;
   max-width: 1100px;
-  
+  display: flex;
   box-sizing: border-box;
   scroll-behavior: smooth;
   margin: 0 auto;
   font-size: $font-size-desktop;
 }
+
 
 .container {
   width: 100%;
