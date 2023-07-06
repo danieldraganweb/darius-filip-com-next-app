@@ -1,3 +1,7 @@
+@use './app/styles/base/_variables' as _variables;
+@use './app/styles/utils/_mixins' as _mixins;
+@use './app/styles/base/_base' as _base;
+
 .container {
     width: 80%;
     max-width: 1100px;

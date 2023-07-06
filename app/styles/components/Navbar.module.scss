@@ -1,24 +1,24 @@
 
-@use './app/styles/base/_variables' as _variables;
+@use './app/styles/base/_variables' as *;
 @use './app/styles/utils/_mixins' as _mixins;
 @use './app/styles/base/_base' as _base;
 
 .navbar {
-  background-color: _variables.$primary-color;
-  font-family: _variables.$primary-font;
+  background-color: $primary-color;
+  font-family: $primary-font;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   max-width: 1100px;
 
   .logo {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 300;
     text-decoration: none;
-    font-family: _variables.$primary-font;
-    color: _variables.$primary-text-color;
+    font-family: $primary-font;
+    color: $secondary-color;
     
   }
   .burgerMenu {
@@ -52,7 +52,7 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    font-size: _variables.$font-size-desktop;
+    font-size: $font-size-desktop;
 
 
     &.open {
@@ -62,7 +62,7 @@
       top: 100%;
       left: 0;
       width: 100%;
-      background-color:_variables.$quaternary-color;
+      background-color:$quaternary-color;
       padding: 1rem;
       z-index: 100;
 
@@ -75,7 +75,7 @@
 
     a {
       text-decoration: none;
-      color: _variables.$primary-text-color;
+      color: $primary-text-color;
     }
   }
   .instagramSVG {
@@ -87,6 +87,6 @@
     align-items: center;
   }
   .instagramSVG:hover {
-    color: _variables.$primary-color;
+    color: $primary-color;
   }
 }
