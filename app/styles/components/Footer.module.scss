@@ -1,7 +1,7 @@
-@use './app/styles/base/_variables' as _variables;
+@use './app/styles/base/_variables' as *;
 
 .main{
-    font-family: _variables.$primary-font;
+    font-family: $primary-font;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,7 +15,7 @@
         p{
             font-size: 1.5rem;
             font-weight: 600;
-            color: _variables.$tertiary-color;
+            color: $tertiary-color;
         }
     }
 }

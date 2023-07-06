@@ -16,19 +16,10 @@ const Navbar = () => {
     <>
       <div className={styles.container}>
         <nav className={styles.navbar}>
-          <div className={styles.instagramSVG}>
-            <Header />
-            <div className={styles.instagram}>
-              <a
-                href="https://www.instagram.com/dariusfilip/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <InstagramSVG />
-              </a>
-            </div>
+          <Header />
+          <div className={styles.instagram}>
+            <InstagramSVG />
           </div>
-
           <button className={styles.burgerMenu} onClick={toggleMenu}>
             Menu
             <span></span>

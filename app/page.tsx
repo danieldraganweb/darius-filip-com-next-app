@@ -4,9 +4,8 @@ import styles from "./page.module.scss";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.banner}>
+      <div className={styles.container}>
         <Banner />
-        <p className={styles.description}></p>
       </div>
     </main>
   );
