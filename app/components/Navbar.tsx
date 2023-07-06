@@ -38,43 +38,45 @@ const Navbar = () => {
           </div>
 
           <div className={styles.burgerMenuContainer}>
-            <button
-              className={styles.burgerMenu}
-              onClick={toggleMenu}
-              aria-label="Toggle Menu"
-            >
-              <svg
-                fill="var(--button-color)"
-                className={styles.hamburger}
-                viewBox="0 0 100 100"
-                width="20"
+            <div className={styles.burgerMenu}>
+              <button
+                className={styles.burgerMenuButton}
+                onClick={toggleMenu}
+                aria-label="Toggle Menu"
               >
-                <rect
-                  className={styles.lineTop}
-                  width="80"
-                  height="10"
-                  x="10"
-                  y="25"
-                  rx="5"
-                />
-                <rect
-                  className={styles.lineMiddle}
-                  width="80"
-                  height="10"
-                  x="10"
-                  y="45"
-                  rx="5"
-                />
-                <rect
-                  className={styles.lineBottom}
-                  width="80"
-                  height="10"
-                  x="10"
-                  y="65"
-                  rx="5"
-                />
-              </svg>
-            </button>
+                <svg
+                  fill="var(--button-color)"
+                  className={styles.hamburger}
+                  viewBox="0 0 90 90"
+                  width="22"
+                >
+                  <rect
+                    className={styles.lineTop}
+                    width="88"
+                    height="10"
+                    x="1"
+                    y="10"
+                    rx="5"
+                  />
+                  <rect
+                    className={styles.lineMiddle}
+                    width="88"
+                    height="10"
+                    x="1"
+                    y="40"
+                    rx="5"
+                  />
+                  <rect
+                    className={styles.lineBottom}
+                    width="88"
+                    height="10"
+                    x="1"
+                    y="70"
+                    rx="5"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
           <ul
             className={`${styles.navLinks} ${

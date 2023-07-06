@@ -37,6 +37,7 @@ function BannerImage() {
           }}
           blurDataURL={randomImage}
           placeholder="blur"
+          onLoad={() => setLoading(false)}
           onLoadingComplete={() => setLoading(false)}
         />
       </div>
