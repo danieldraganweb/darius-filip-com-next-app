@@ -72,13 +72,11 @@
   .instagramSVG {
     color: #333;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .instagramSVG:hover {
-    color: $primary-color;
+    color: $quaternary-color;
   }
+
   @media screen and (max-width: 800px) {
     .burgerMenu {
       display: flex;
@@ -92,7 +90,6 @@
       border: none;
       padding: 0;
       font-size: 1rem;
-      margin-top: 0.5rem;
       color: #000;
 
       span {

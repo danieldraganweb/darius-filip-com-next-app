@@ -16,9 +16,7 @@ const Navbar = () => {
     <>
       <div className={styles.main}>
         <nav className={styles.navbar}>
-          <div className={styles.instagram}>
-            <Header />
-          </div>
+          <Header />
           <button className={styles.burgerMenu} onClick={toggleMenu}>
             Menu
             <span></span>
