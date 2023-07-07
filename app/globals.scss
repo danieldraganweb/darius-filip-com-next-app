@@ -21,8 +21,8 @@ body {
   font-family: $primary-font;
   font-size: 1.6rem; // This sets the base font-size to be 16px
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
+  color: $secondary-color;
+  background-color: $primary-color;
 }
 
 h1, h2, h3, h4, h5, h6 {

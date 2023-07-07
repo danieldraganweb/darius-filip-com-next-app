@@ -6,7 +6,7 @@ import InstagramSVG from "./InstagramSVG";
 import Header from "./Header";
 import Image from "next/image";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -43,6 +43,7 @@ const Navbar = () => {
                   className={styles.burgerMenuButton}
                   onClick={toggleMenu}
                   aria-label="Toggle Menu"
+                  aria-expanded={menuOpen ? "true" : "false"}
                 >
                   <svg
                     fill="var(--button-color)"
@@ -84,27 +85,47 @@ const Navbar = () => {
               }`}
             >
               <li>
-                <Link href="/series" onClick={() => setMenuOpen(false)}>
+                <Link
+                  key="series"
+                  href="/series"
+                  onClick={() => setMenuOpen(false)}
+                >
                   Series.
                 </Link>
               </li>
               <li>
-                <Link href="/recent" onClick={() => setMenuOpen(false)}>
+                <Link
+                  key="recent"
+                  href="/recent"
+                  onClick={() => setMenuOpen(false)}
+                >
                   Recent.
                 </Link>
               </li>
               <li>
-                <Link href="/contact" onClick={() => setMenuOpen(false)}>
+                <Link
+                  key="contact"
+                  href="/contact"
+                  onClick={() => setMenuOpen(false)}
+                >
                   Contact.
                 </Link>
               </li>
               <li>
-                <Link href="/about" onClick={() => setMenuOpen(false)}>
+                <Link
+                  key="about"
+                  href="/about"
+                  onClick={() => setMenuOpen(false)}
+                >
                   About.
                 </Link>
               </li>
               <li>
-                <Link href="/bookshop" onClick={() => setMenuOpen(false)}>
+                <Link
+                  key="bookshop"
+                  href="/bookshop"
+                  onClick={() => setMenuOpen(false)}
+                >
                   Bookshop.
                 </Link>
               </li>

@@ -21,7 +21,7 @@ function BannerImage() {
       "/main-img-1.jpg",
       "/main-img-3.jpg",
       "/main-img-8.jpg",
-      "/main-img-9.jpg",
+      "/main-img-9.jpeg",
       "/main-img-10.jpg",
     ];
     const images = isDesktop ? imagesDesktop : imagesMobile;

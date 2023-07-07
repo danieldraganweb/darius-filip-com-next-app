@@ -13,7 +13,7 @@
   width: 100%;
   max-width: 1100px;
   flex-basis: 100%;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   padding-top: 0.5em;
 
   .logo {
@@ -43,7 +43,7 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    font-size: $font-size-normal;
+    font-size: $font-size-small;
    
 
 
@@ -64,7 +64,7 @@
       align-items: center;
       list-style: none;
       // margin-bottom: 5em;
-      margin-top: 3.2em;
+      margin-top: 2.5em;
       border-radius: 0.5em;
       padding-left: 1em;
       padding-right: 1em;
@@ -109,11 +109,9 @@
       justify-content: flex-end;
       align-items: center;
       flex-basis: 15%;
-      position:relative;
-  
-    
+      position: relative;
     }
-
+    
     .burgerMenu {
       display: flex;
       flex-direction: column;
@@ -125,9 +123,10 @@
       padding: 0;
       font-size: 1rem;
       margin: 0 auto;
+      border: 2px solid $primary-color;
     }
-
-    .burgerMenuButton{
+    
+    .burgerMenuButton {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -139,6 +138,33 @@
       font-size: 0.1rem;
       padding: 0.5em;
       border: none;
+    }
+    
+    .lineTop,
+    .lineMiddle,
+    .lineBottom {
+      fill: var(--button-color);
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    
+    .lineTop {
+      transform-origin: 0.125rem -0.125rem;
+    }
+    
+    .lineBottom {
+      transform-origin: 0.125rem -0.125rem;
+    }
+    
+    .burgerMenuButton[aria-expanded="true"] .lineTop {
+      transform: rotate(45deg) translate(1.50rem, -0.80rem);
+    }
+    
+    .burgerMenuButton[aria-expanded="true"] .lineMiddle {
+      opacity: 0;
+    }
+    
+    .burgerMenuButton[aria-expanded="true"] .lineBottom {
+      transform: rotate(-45deg) translate(-3rem, -0.80rem);
     }
     
     .navLinks {
@@ -169,19 +195,4 @@
       text-decoration: none;
     }
   
-  //   .InstagramSVG{
-  //     margin-left: 1em;
-  //     margin: 0 auto;
-  //     fill: $secondary-color;
-  //     transition: all 0.2s ease-in-out;
-  //     &:hover{
-  //       fill: $primary-color;
-  //     }
-  //     a{
-  //       text-decoration: none;
-  //       color: $primary-text-color;
-  //       display: flex;
-  //     }
-  //   }
-  // }
 
