@@ -10,6 +10,11 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding-left: 0.5em !important;
+    padding-right: 0.5em !important;
+    overflow: hidden;
+    // height: 100vh;
+   
   }
 
   .object-contain {
@@ -17,7 +22,7 @@
   }
   
   .duration-700 {
-    transition-duration: 1000ms;
+    transition-duration: 1300ms;
   }
   
   .ease-in-out {
@@ -29,7 +34,7 @@
   }
   
   .scale-110 {
-    transform: scale(1);
+    transform: scale(1.1);
   }
   
   .blur-2xl {
@@ -41,7 +46,7 @@
   }
   
   .scale-100 {
-    transform: scale(1.03);
+    transform: scale(1);
   }
   
   .blur-0 {
