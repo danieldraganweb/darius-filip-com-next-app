@@ -34,11 +34,12 @@ function BannerImage() {
       <div className={styles.img}>
         <Image
           src={randomImage}
-          alt="macarale"
+          alt="Banner Image"
           quality={100}
           width={1100}
           height={500}
-          objectFit="contain"
+          // objectFit="contain"
+          priority={true}
           style={{
             maxWidth: "100%",
             height: "auto",
@@ -46,9 +47,9 @@ function BannerImage() {
             borderRadius: "0.2rem",
             boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
           }}
-          className={`${styles["object-contain"]} ${styles["duration-700"]} ${
-            styles["ease-in-out"]
-          } ${styles["group-hover:opacity-75"]} ${
+          className={` ${styles["duration-700"]} ${styles["ease-in-out"]} ${
+            styles["group-hover:opacity-75"]
+          } ${
             loading
               ? `${styles["scale-110"]} ${styles["blur-2xl"]} ${styles["grayscale"]}`
               : `${styles["scale-100"]} ${styles["blur-0"]} ${styles["grayscale-0"]}`
