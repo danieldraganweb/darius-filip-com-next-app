@@ -1,4 +1,4 @@
-@use './app/styles/base/_variables' as _variables;
+@use './app/styles/base/_variables' as *;
 @use './app/styles/utils/_mixins' as _mixins;
 @use './app/styles/base/_base' as _base;
 

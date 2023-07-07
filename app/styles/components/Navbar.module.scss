@@ -14,7 +14,7 @@
   max-width: 1100px;
   flex-basis: 100%;
   padding-bottom: 1em;
-  padding-top: 1em;
+  padding-top: 0.5em;
 
   .logo {
     display: flex;
@@ -23,6 +23,7 @@
     color: $secondary-color;
     align-items: center;
   }
+
   .burgerMenu {
     display: none;
   }
@@ -42,32 +43,34 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    font-size: $font-size-desktop;
+    font-size: $font-size-normal;
 
 
     &.open {
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       background-color:$primary-color;
-      padding: 1rem;
       position: absolute;
       margin: 0 auto;
-      width: 50%;
+      width: 100%;
+      max-width: 800px;
       top: 0;
+      bottom: 0;
       left: 0;
       right: 0;
-      bottom: 0;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       list-style: none;
-      font-size: $font-size-mobile;
-      margin-bottom: 14.5rem;
-      margin-top: 8.8rem;
-      transition: all 0.3s ease-in-out;
-      border-radius: 1.5em;
+      // margin-bottom: 5em;
+      margin-top: 3.2em;
+      border-radius: 0.5em;
+      padding-left: 1em;
+      padding-right: 1em;
+      font-size: $font-size-normal;
+      z-index: 1;
+      transition: all 0.9s ease-in-out;
       
-     
-
       li {
         margin-bottom: 1rem;
         text-decoration: none;
@@ -84,10 +87,10 @@
     
   }
 
-  // .navLinks a:hover {
-  //   border-bottom: 2px solid $secondary-color;
-  //   padding-bottom: 0.2em;
-  // }
+    .navLinks a:hover {
+      border-bottom: 2px solid $secondary-color;
+      
+    }
 
   .InstagramSVG{
     display: none;
@@ -122,6 +125,7 @@
       font-size: 1rem;
       margin: 0 auto;
     }
+
     .burgerMenuButton{
       display: flex;
       flex-direction: row;
@@ -132,33 +136,13 @@
       border: none;
       padding: 0;
       font-size: 0.1rem;
-      transition: all 0.3s ease-in-out;
       padding: 0.5em;
       border: none;
     }
     
-    
     .navLinks {
       display: none;
     }
-    &.open {
-      display: flex;
-      flex-direction: column;
-      background-color:$primary-color;
-      padding: 1rem;
-      position: relative;
-      margin: 0 auto;
-      width: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      justify-content: space-between;
-      align-items: center;
-      list-style: none;
-      font-size: $font-size-mobile;
-    
 
       li {
         margin-bottom: 1rem;
@@ -177,26 +161,26 @@
 
   .navLinks a:hover {
     border-bottom: 2px solid $secondary-color;
-    padding-bottom: 0.2em;
   }
 
     .logo {
-      font-size: $font-size-desktop-ultra-wide;
+      font-size: $font-size-normal;
       text-decoration: none;
     }
-    .InstagramSVG{
-      margin-left: 1em;
-      margin: 0 auto;
-      fill: $secondary-color;
-      transition: all 0.2s ease-in-out;
-      &:hover{
-        fill: $primary-color;
-      }
-      a{
-        text-decoration: none;
-        color: $primary-text-color;
-        display: flex;
-      }
-    }
-  }
+  
+  //   .InstagramSVG{
+  //     margin-left: 1em;
+  //     margin: 0 auto;
+  //     fill: $secondary-color;
+  //     transition: all 0.2s ease-in-out;
+  //     &:hover{
+  //       fill: $primary-color;
+  //     }
+  //     a{
+  //       text-decoration: none;
+  //       color: $primary-text-color;
+  //       display: flex;
+  //     }
+  //   }
+  // }
 

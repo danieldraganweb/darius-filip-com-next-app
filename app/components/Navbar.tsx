@@ -15,101 +15,102 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={styles.main}>
-        <nav className={styles.navbar}>
-          <div className={styles.header}>
-            <div className={styles.InstagramSVG}>
-              <InstagramSVG />
+      <div className={styles.container}>
+        <div className={styles.main}>
+          <nav className={styles.navbar}>
+            <div className={styles.header}>
+              <div className={styles.InstagramSVG}>
+                <InstagramSVG />
+              </div>
+              <div className={styles.logo}>
+                <Image
+                  src="/favicon.png"
+                  alt="logo"
+                  width={40}
+                  height={40}
+                  quality={100}
+                  style={{
+                    borderRadius: "50%",
+                    margin: "0 0.5rem",
+                  }}
+                />
+                <Header />
+              </div>
             </div>
-            <div className={styles.logo}>
-              <Image
-                src="/favicon.png"
-                alt="logo"
-                width={40}
-                height={40}
-                quality={100}
-                style={{
-                  borderRadius: "50%",
-                  margin: "0 0.5rem",
-                }}
-              />
-              <Header />
-            </div>
-          </div>
-
-          <div className={styles.burgerMenuContainer}>
-            <div className={styles.burgerMenu}>
-              <button
-                className={styles.burgerMenuButton}
-                onClick={toggleMenu}
-                aria-label="Toggle Menu"
-              >
-                <svg
-                  fill="var(--button-color)"
-                  className={styles.hamburger}
-                  viewBox="0 0 90 90"
-                  width="22"
+            <div className={styles.burgerMenuContainer}>
+              <div className={styles.burgerMenu}>
+                <button
+                  className={styles.burgerMenuButton}
+                  onClick={toggleMenu}
+                  aria-label="Toggle Menu"
                 >
-                  <rect
-                    className={styles.lineTop}
-                    width="88"
-                    height="10"
-                    x="1"
-                    y="10"
-                    rx="5"
-                  />
-                  <rect
-                    className={styles.lineMiddle}
-                    width="88"
-                    height="10"
-                    x="1"
-                    y="40"
-                    rx="5"
-                  />
-                  <rect
-                    className={styles.lineBottom}
-                    width="88"
-                    height="10"
-                    x="1"
-                    y="70"
-                    rx="5"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    fill="var(--button-color)"
+                    className={styles.hamburger}
+                    viewBox="0 0 90 90"
+                    width="22"
+                  >
+                    <rect
+                      className={styles.lineTop}
+                      width="88"
+                      height="10"
+                      x="1"
+                      y="10"
+                      rx="5"
+                    />
+                    <rect
+                      className={styles.lineMiddle}
+                      width="88"
+                      height="10"
+                      x="1"
+                      y="40"
+                      rx="5"
+                    />
+                    <rect
+                      className={styles.lineBottom}
+                      width="88"
+                      height="10"
+                      x="1"
+                      y="70"
+                      rx="5"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-          <ul
-            className={`${styles.navLinks} ${
-              menuOpen ? styles.open : styles.closed
-            }`}
-          >
-            <li>
-              <Link href="/series" onClick={() => setMenuOpen(false)}>
-                Series.
-              </Link>
-            </li>
-            <li>
-              <Link href="/recent" onClick={() => setMenuOpen(false)}>
-                Recent.
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" onClick={() => setMenuOpen(false)}>
-                Contact.
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" onClick={() => setMenuOpen(false)}>
-                About.
-              </Link>
-            </li>
-            <li>
-              <Link href="/bookshop" onClick={() => setMenuOpen(false)}>
-                Bookshop.
-              </Link>
-            </li>
-          </ul>
-        </nav>
+            <ul
+              className={`${styles.navLinks} ${
+                menuOpen ? styles.open : styles.closed
+              }`}
+            >
+              <li>
+                <Link href="/series" onClick={() => setMenuOpen(false)}>
+                  Series.
+                </Link>
+              </li>
+              <li>
+                <Link href="/recent" onClick={() => setMenuOpen(false)}>
+                  Recent.
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" onClick={() => setMenuOpen(false)}>
+                  Contact.
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" onClick={() => setMenuOpen(false)}>
+                  About.
+                </Link>
+              </li>
+              <li>
+                <Link href="/bookshop" onClick={() => setMenuOpen(false)}>
+                  Bookshop.
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </>
   );
