@@ -1,4 +1,4 @@
-@use './app/styles/base/_variables' as _variables;
+@use './app/styles/base/_variables' as *;
 @use './app/styles/utils/_mixins' as _mixins;
 @use './app/styles/base/_base' as _base;
 
@@ -18,7 +18,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: _variables.$primary-font;
+  font-family: $primary-font;
   font-size: 1.6rem; // This sets the base font-size to be 16px
   line-height: 1.6;
   color: #333;
@@ -39,11 +39,16 @@ a {
   }
 
   &:focus {
-    outline: 2px solid _variables.$primary-color;
+    outline: 2px solid $primary-color;
   }
 }
 
 ul {
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

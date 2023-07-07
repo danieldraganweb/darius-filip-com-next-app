@@ -2,22 +2,32 @@
 import Image from "next/image";
 import styles from "../styles/components/Banner.module.scss";
 import { useState, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 
 function BannerImage() {
-  const images = [
-    "/main-img-2.jpg",
-    "/main-img-4.jpg",
-    "/main-img-5.jpg",
-    "/main-img-6.jpg",
-    "/main-img-7.jpg",
-  ];
   const [randomImage, setRandomImage] = useState("");
   const [loading, setLoading] = useState(true);
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   useEffect(() => {
+    const imagesMobile = [
+      "/main-img-2.jpg",
+      "/main-img-4.jpg",
+      "/main-img-5.jpg",
+      "/main-img-6.jpg",
+      "/main-img-7.jpg",
+    ];
+    const imagesDesktop = [
+      "/main-img-1.jpg",
+      "/main-img-3.jpg",
+      "/main-img-8.jpg",
+      "/main-img-9.jpg",
+      "/main-img-10.jpg",
+    ];
+    const images = isDesktop ? imagesDesktop : imagesMobile;
     const randomIndex = Math.floor(Math.random() * images.length);
     setRandomImage(images[randomIndex]);
-  }, []);
+  }, [isDesktop]);
 
   return (
     <div className={styles.main}>
@@ -26,8 +36,8 @@ function BannerImage() {
           src={randomImage}
           alt="macarale"
           quality={100}
-          width={1250}
-          height={700}
+          width={1100}
+          height={500}
           objectFit="contain"
           style={{
             maxWidth: "100%",
@@ -43,7 +53,6 @@ function BannerImage() {
               ? `${styles["scale-110"]} ${styles["blur-2xl"]} ${styles["grayscale"]}`
               : `${styles["scale-100"]} ${styles["blur-0"]} ${styles["grayscale-0"]}`
           }`}
-          // onLoad={() => setLoading(false)}
           onLoadingComplete={() => setLoading(false)}
         />
       </div>
@@ -52,55 +61,3 @@ function BannerImage() {
 }
 
 export default BannerImage;
-
-// "use client";
-// import Image from "next/image";
-// import styles from "../styles/components/Banner.module.scss";
-// import { useState, useEffect } from "react";
-
-// function BannerImage() {
-//   const images = [
-//     "/main-img-2.jpg",
-//     "/main-img-4.jpg",
-//     "/main-img-5.jpg",
-//     "/main-img-6.jpg",
-//     "/main-img-7.jpg",
-//   ];
-//   const [randomImage, setRandomImage] = useState("");
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     const randomIndex = Math.floor(Math.random() * images.length);
-//     setRandomImage(images[randomIndex]);
-//   }, []);
-
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.main}>
-//         <div className={styles.img}>
-//           {randomImage && (
-//             <Image
-//               src={randomImage}
-//               alt="macarale"
-//               quality={100}
-//               width={1250}
-//               height={700}
-//               objectFit="contain"
-//               className={`${styles.container} ${styles["duration-700"]} ${
-//                 styles["ease-in-out"]
-//               } ${styles["group-hover:opacity-75"]} ${
-//                 loading
-//                   ? `${styles["scale-110"]} ${styles["blur-2xl"]} ${styles["grayscale"]}`
-//                   : `${styles["scale-100"]} ${styles["blur-0"]} ${styles["grayscale-0"]}`
-//               }`}
-//               onLoad={() => setLoading(false)}
-//               onLoadingComplete={() => setLoading(false)}
-//             />
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default BannerImage;
