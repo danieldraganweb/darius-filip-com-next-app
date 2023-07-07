@@ -12,8 +12,42 @@
     margin: 0 auto;
   }
 
-  .img {
-    transition: all 2s ease-in-out opacity;
-    opacity: 1;
+  .object-contain {
+    object-fit: contain;
   }
   
+  .duration-700 {
+    transition-duration: 1000ms;
+  }
+  
+  .ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+  
+  .group-hover\:opacity-75:hover {
+    opacity: 0.8;
+  }
+  
+  .scale-110 {
+    transform: scale(1);
+  }
+  
+  .blur-2xl {
+    filter: blur(16px);
+  }
+  
+  .grayscale {
+    filter: blur(70%);
+  }
+  
+  .scale-100 {
+    transform: scale(1.03);
+  }
+  
+  .blur-0 {
+    filter: blur(1);
+  }
+  
+  .grayscale-0 {
+    filter: grayscale(0);
+  }

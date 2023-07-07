@@ -44,6 +44,7 @@
     align-items: center;
     list-style: none;
     font-size: $font-size-normal;
+   
 
 
     &.open {
@@ -69,7 +70,7 @@
       padding-right: 1em;
       font-size: $font-size-normal;
       z-index: 1;
-      transition: all 0.9s ease-in-out;
+      
       
       li {
         margin-bottom: 1rem;

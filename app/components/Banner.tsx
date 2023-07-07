@@ -35,8 +35,13 @@ function BannerImage() {
             borderRadius: "0.2rem",
             boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
           }}
-          blurDataURL={randomImage}
-          placeholder="blur"
+          className={`${styles["object-contain"]} ${styles["duration-700"]} ${
+            styles["ease-in-out"]
+          } ${styles["group-hover:opacity-75"]} ${
+            loading
+              ? `${styles["scale-110"]} ${styles["blur-2xl"]} ${styles["grayscale"]}`
+              : `${styles["scale-100"]} ${styles["blur-0"]} ${styles["grayscale-0"]}`
+          }`}
           onLoad={() => setLoading(false)}
           onLoadingComplete={() => setLoading(false)}
         />
