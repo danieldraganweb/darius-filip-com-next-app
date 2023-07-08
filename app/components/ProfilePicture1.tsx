@@ -4,7 +4,7 @@ import styles from "../styles/components/ProfilePicture1.module.scss";
 
 function ProfileImg() {
   return (
-    <div className={styles.container}>
+    <main className={styles.main}>
       <Image
         src="/portrait.jpeg"
         alt="logo"
@@ -16,7 +16,7 @@ function ProfileImg() {
           margin: "0 0.5rem",
         }}
       />
-    </div>
+    </main>
   );
 }
 

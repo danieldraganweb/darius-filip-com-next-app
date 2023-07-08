@@ -1,23 +1,17 @@
-@use './app/styles/base/_variables' as _variables;
+@use './app/styles/base/_variables' as *;
 @use './app/styles/utils/_mixins' as _mixins;
 @use './app/styles/base/_base' as _base;
 
 .main {
-  width: 100%;
-  max-width: 1100px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  background-color: aqua;
-  border : 5px solid _variables.$quaternary-color;
-}
-
-.container{
-    border: 2px solid _variables.$secondary-color;
-    box-sizing: border-box;
+    width: 25%;
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    width: 50%;
     margin: 0 auto;
+    padding: 1em;
+    margin-top: auto;
+    margin-bottom: auto; 
+    box-sizing: border-box;
 }
