@@ -9,9 +9,9 @@ function About() {
         <div className={styles.ImageContainer}>
           <ProfileImg />
         </div>
-        <h1 className={styles.title}>About Me</h1>
       </header>
       <section className={styles.section}>
+        <h1 className={styles.title}>About Me</h1>
         <div>
           <p className={styles.description}>
             I was born in Romania in the early 1990s, a time when the country
