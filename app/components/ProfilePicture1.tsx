@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/components/ProfileImg.module.scss";
+import styles from "../styles/components/ProfilePicture1.module.scss";
 
 function ProfileImg() {
   return (
     <div className={styles.container}>
       <Image
-        src="/bio.jpg"
+        src="/portrait.jpeg"
         alt="logo"
-        width={40}
-        height={40}
+        width={240}
+        height={240}
         quality={100}
         style={{
           borderRadius: "50%",
