@@ -39,6 +39,7 @@ const Navbar: React.FC = () => {
             </div>
             <div className={styles.burgerMenuContainer}>
               <div className={styles.burgerMenu}>
+                {/* <h6 className={styles.title}>Menu</h6> */}
                 <button
                   className={styles.burgerMenuButton}
                   onClick={toggleMenu}
@@ -90,7 +91,7 @@ const Navbar: React.FC = () => {
                   href="/series"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Series.
+                  Series
                 </Link>
               </li>
               <li>
@@ -99,7 +100,7 @@ const Navbar: React.FC = () => {
                   href="/recent"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Recent.
+                  Recent
                 </Link>
               </li>
               <li>
@@ -108,7 +109,7 @@ const Navbar: React.FC = () => {
                   href="/contact"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Contact.
+                  Contact
                 </Link>
               </li>
               <li>
@@ -117,7 +118,7 @@ const Navbar: React.FC = () => {
                   href="/about"
                   onClick={() => setMenuOpen(false)}
                 >
-                  About.
+                  About
                 </Link>
               </li>
               <li>
@@ -126,7 +127,7 @@ const Navbar: React.FC = () => {
                   href="/bookshop"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Bookshop.
+                  Bookshop
                 </Link>
               </li>
             </ul>

@@ -64,12 +64,14 @@
       align-items: center;
       list-style: none;
       // margin-bottom: 5em;
-      margin-top: 2.5em;
+      margin-top: 3em;
       border-radius: 0.5em;
       padding-left: 1em;
       padding-right: 1em;
-      font-size: $font-size-normal;
+      font-size: $font-size-small;
       z-index: 1;
+      padding-bottom: 15em;
+      padding-top: 7em;
       
       
       li {
@@ -101,6 +103,7 @@
   @media screen and (max-width: 800px) {
     .hamburger{
       background-color: $primary-color;
+
     }
 
     .burgerMenuContainer {
@@ -114,8 +117,7 @@
     
     .burgerMenu {
       display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       cursor: pointer;
       text-align: center;
@@ -144,7 +146,7 @@
     .lineMiddle,
     .lineBottom {
       fill: var(--button-color);
-      transition: transform 0.3s ease-in-out, opacity 0.1s ease-in-out;
+      transition: transform 0.3s ease-in-out, opacity 0s ease-in-out;
     }
     
     .lineTop {
