@@ -1,0 +1,23 @@
+@use './app/styles/base/_variables' as _variables;
+@use './app/styles/utils/_mixins' as _mixins;
+@use './app/styles/base/_base' as _base;
+
+.main {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: aqua;
+  border : 5px solid _variables.$quaternary-color;
+}
+
+.container{
+    border: 2px solid _variables.$secondary-color;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
