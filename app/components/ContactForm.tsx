@@ -35,10 +35,10 @@ function ContactForm() {
 
   return (
     <div className={styles.formContainer}>
-      <h1>Get in touch!</h1>
+      <h1>Get in touch !</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name"></label>
           <input
             type="text"
             id="name"
@@ -46,10 +46,11 @@ function ContactForm() {
             value={name}
             onChange={handleInputChange}
             required
+            placeholder="Name"
           />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email"></label>
           <input
             type="email"
             id="email"
@@ -57,10 +58,11 @@ function ContactForm() {
             value={email}
             onChange={handleInputChange}
             required
+            placeholder="Email"
           />
         </div>
         <div>
-          <label htmlFor="subject">Subject:</label>
+          <label htmlFor="Subject"></label>
           <input
             type="text"
             id="subject"
@@ -68,19 +70,24 @@ function ContactForm() {
             value={subject}
             onChange={handleInputChange}
             required
+            placeholder="Subject"
           />
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="Message"></label>
+          <br />
           <textarea
             id="message"
             name="message"
             value={message}
             onChange={handleInputChange}
             required
+            placeholder="Message"
           />
         </div>
-        <button type="submit">{status}</button>
+        <div className={styles.buttonContainer}>
+          <button type="submit">{status}</button>
+        </div>
       </form>
     </div>
   );

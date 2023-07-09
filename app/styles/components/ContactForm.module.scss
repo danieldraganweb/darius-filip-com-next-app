@@ -7,55 +7,100 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
-    max-width: 400px;
+    max-width: 25em;
     margin: 0 auto;
     padding: 1rem;
-    background-color: #fff;
+    background-color: $primary-color;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     font-size: clamp(1rem, 5vw, 1.5rem);
+    font-family: $primary-font;
+    margin-bottom: 3em;
+
+    h1 {
+        font-size: $font-size-normal;
+        margin-bottom: 1em;
+        color: $secondary-color;
+        font-weight: 300;
+    }
 
     input {
+        box-sizing: border-box;
         width: 100%;
-        margin: 0.5rem 0;
+        max-width: 20em;
+        margin: 0 auto;
         padding: 0.5rem;
         border: 1px solid #ccc;
         border-radius: 5px;
-        font-size: 1rem;
+        font-size: $font-size-small;
+        padding-bottom: 1em;
+        padding-top: 1em;
+        padding-left: 1em;
+        margin-bottom: 1em;
+        margin-top: 1em;
     }
 
     textarea {
         width: 100%;
-        max-width: 600px;
-        margin: 0.5rem 0;
+        max-width: 18em;
+        min-width: 18em;
+        margin: 0 auto;
         padding: 0.5rem;
+        padding-left: 1em;
+        padding-top: 1em;
         border: 1px solid #ccc;
         border-radius: 5px;
-        font-size: 1rem;
+        font-size: $font-size-small;
+        padding-bottom: 12em;
+        box-sizing: content-box;
+        font-family: $primary-font;
     }
 
+    .buttonContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 20em;
+        margin: 0 auto;
+        border-radius: 5px;
+        margin-bottom: 1.5em;
+        margin-top: 1.5em;
+    }
+    
     button {
         width: 100%;
-        max-width: 100%;
-        padding: 0.5rem;
+        max-width: 20em;
+        padding: 0.7rem;
         border: 1px solid #ccc;
         border-radius: 5px;
-        font-size: 1rem;
-        background-color: #f1356d;
-        color: #fff;
+        font-size: $font-size-small;
+        background-color: $secondary-color;
+        color: $primary-color;
         cursor: pointer;
-        margin: 0.5rem 0;
+        box-sizing: border-box;
+    
     }
     button:hover {
-        background-color: #211f1f;
-        color: #fff;
+        background-color: $senary-color;
+        color: $secondary-color;
+
+    }
+    
+    button:active {
+        background-color: $senary-color;
+        color: $secondary-color;
+    }
+
+    button:focus {
+        outline: none;
     }
 
     .error {
-        color: red;
+        color: $tertiary-color;
         font-size: 0.8rem;
     }
 
