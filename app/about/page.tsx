@@ -8,6 +8,8 @@ function About() {
       <header className={styles.headerContainer}>
         <div className={styles.imageContainer}>
           <ProfileImg />
+        </div>
+        <div className={styles.titleContainer}>
           <h3 className={styles.title}>
             Greetings and welcome to my About section. My name is Darius Filip,
             and I`m a Romanian-born photographer, based in Copenhagen, Denmark.

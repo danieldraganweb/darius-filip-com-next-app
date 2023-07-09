@@ -3,14 +3,13 @@
 @use './app/styles/base/_base' as _base;
 
 .main {
-    width: 25%;
+    width: 100%;
     max-width: 1100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     margin: 0 auto;
-    padding: 1em;
     margin-top: auto;
     margin-bottom: auto; 
     box-sizing: border-box;
