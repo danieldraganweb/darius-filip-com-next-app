@@ -16,10 +16,11 @@
 
 .headerContainer{
     background-color: gainsboro;
-    width: 80%;
+    width: 100%;
     max-width: 1100px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     margin-bottom: 1em;
@@ -30,20 +31,19 @@
 
 .title{
   box-sizing: border-box;
-    font-size: clamp(1.5rem, 5vw, 2rem);
-    font-weight: bold;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-family: $primary-font;
     color:$secondary-color;
     margin: 0;
     padding: 0;
     text-align: start;
-    width: 70%;
+    width: 75%;
     padding: 1em;
     
 }
 
 .imageContainer{
-  width: 100%;
-  max-width: 1100px;
+  
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -63,13 +63,14 @@
 
 
 .description{
-    width: 80%;
+    box-sizing: border-box;
+    width: 100%;
     max-width: 1100px;
     text-align: start;
     margin: 0 auto;
     margin-bottom: 1em;
     color:$secondary-color;
-    font-size: clamp(0.5rem, 1.5vw, 1.3rem);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     padding: 1em;
 }
 
@@ -126,8 +127,9 @@
     align-items: center;
     margin: 0 auto;
     margin-bottom: 1em;
-    padding: auto;
+ 
   }
+  .headerContainer
 
    .title{
     width: 100%;

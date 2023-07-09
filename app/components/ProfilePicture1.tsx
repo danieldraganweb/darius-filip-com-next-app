@@ -8,12 +8,11 @@ function ProfileImg() {
       <Image
         src="/portrait.jpeg"
         alt="logo"
-        width={240}
-        height={240}
+        width={170}
+        height={170}
         quality={100}
         style={{
           borderRadius: "50%",
-          margin: "0 0.5rem",
         }}
       />
     </main>
