@@ -47,7 +47,7 @@
 .title{
   box-sizing: border-box;
   font-family: $primary-font;
-  font-size: $font-size-x-large;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   color: $secondary-color;
   margin: 0 auto;
   padding: 0;
@@ -75,7 +75,7 @@
   margin: 0 auto;
   margin-bottom: 1em;
   color:$secondary-color;
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   padding: 0.5em;
   // margin-bottom: 1em;
   display: inline-block;
@@ -187,6 +187,8 @@
     text-align: start;
     padding: 0;
     font-size: $font-size-large;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 500;
    
 }
   
