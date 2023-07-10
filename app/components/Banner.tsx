@@ -4,7 +4,7 @@ import styles from "../styles/components/Banner.module.scss";
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 
-function BannerImage() {
+export default function BannerImage() {
   const [randomImage, setRandomImage] = useState("");
   const [loading, setLoading] = useState(true);
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -31,14 +31,13 @@ function BannerImage() {
 
   return (
     <div className={styles.main}>
-      <div className={styles.img}>
+      <div className={styles.img} onLoad={() => setLoading(false)}>
         <Image
           src={randomImage}
           alt="Banner Image"
           quality={100}
           width={1100}
           height={500}
-          // objectFit="contain"
           priority={true}
           style={{
             maxWidth: "100%",
@@ -54,11 +53,8 @@ function BannerImage() {
               ? `${styles["scale-110"]} ${styles["blur-2xl"]} ${styles["grayscale"]}`
               : `${styles["scale-100"]} ${styles["blur-0"]} ${styles["grayscale-0"]}`
           }`}
-          onLoadingComplete={() => setLoading(false)}
         />
       </div>
     </div>
   );
 }
-
-export default BannerImage;
