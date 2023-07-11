@@ -4,13 +4,15 @@
 
   .main {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     overflow: hidden;
+    margin-bottom: 2.2em;
+    
   }
 
   .imgContainer {
@@ -18,17 +20,15 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    // border: 5px solid red;
-    position: relative;
-    overflow: hidden;
+    max-width: 1100px;
     background-clip: content-box;
-    box-sizing: border-box;
-    padding: 0.3em;
-    margin-bottom: 3em;
+    border-radius: 0.2em;// 
+    overflow: hidden;
+    margin: 0 auto;
   }
 
   .object-contain {
-    object-fit: cover;
+    object-fit: contain;
   }
   
   .duration-700 {

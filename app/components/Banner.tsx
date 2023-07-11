@@ -37,11 +37,11 @@ export default function BannerImage() {
           alt="Banner Image"
           quality={100}
           width={1100}
-          height={690}
+          height={730}
           priority={true}
           style={{
-            objectFit: "cover",
-            borderRadius: "0.2rem",
+            objectFit: "fill",
+            borderRadius: "0.2em",
             boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
           }}
           className={` ${styles["duration-700"]} ${styles["ease-in-out"]} ${
