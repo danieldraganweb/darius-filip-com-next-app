@@ -22,6 +22,8 @@
     font-family: $primary-font;
     color: $secondary-color;
     align-items: center;
+    margin: 0;
+    margin-right: 0.1em;
   }
 
   .burgerMenu {
@@ -44,6 +46,7 @@
     align-items: center;
     list-style: none;
     font-size: $font-size-small;
+    margin-left: 1em;
    
 
 
@@ -200,6 +203,7 @@
 
   .navLinks a:hover {
     color: black;
+    
   }
 
     .logo {

@@ -5,6 +5,7 @@ import styles from "../styles/components/Navbar.module.scss";
 import InstagramSVG from "./InstagramSVG";
 import Header from "./Header";
 import Image from "next/image";
+import Logo from "./Logo";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,17 +24,7 @@ const Navbar: React.FC = () => {
                 <InstagramSVG />
               </div>
               <div className={styles.logo}>
-                <Image
-                  src="/favicon.png"
-                  alt="logo"
-                  width={40}
-                  height={40}
-                  quality={100}
-                  style={{
-                    borderRadius: "50%",
-                    margin: "0 0.5rem",
-                  }}
-                />
+                <Logo />
                 <Header />
               </div>
             </div>
