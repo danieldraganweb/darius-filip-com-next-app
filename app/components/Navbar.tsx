@@ -4,7 +4,6 @@ import Link from "next/link";
 import styles from "../styles/components/Navbar.module.scss";
 import InstagramSVG from "./InstagramSVG";
 import Header from "./Header";
-import Image from "next/image";
 import Logo from "./Logo";
 
 const Navbar: React.FC = () => {

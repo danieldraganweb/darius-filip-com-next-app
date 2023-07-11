@@ -36,14 +36,15 @@ export default function BannerImage() {
 
   return (
     <div className={styles.main}>
-      <div className={styles.imgContainer} onLoad={() => setLoading(false)}>
+      <div className={styles.imgContainer}>
         <Image
           src={randomImage}
           alt="Banner Image"
           quality={100}
           width={1100}
-          height={isMobile ? 580 : isTablet ? 600 : 700}
+          height={isMobile ? 580 : isTablet ? 600 : 670}
           priority={true}
+          blurDataURL="/main-img-1.jpg"
           style={{
             borderRadius: "0.2em",
             boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
@@ -55,6 +56,7 @@ export default function BannerImage() {
               ? `${styles["scale-110"]} ${styles["blur-2xl"]} ${styles["grayscale"]}`
               : `${styles["scale-100"]} ${styles["blur-0"]} ${styles["grayscale-0"]}`
           }`}
+          onLoadingComplete={() => setLoading(false)}
         />
       </div>
     </div>

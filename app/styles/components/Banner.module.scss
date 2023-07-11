@@ -1,4 +1,4 @@
-@use './app/styles/base/_variables' as _variables;
+@use './app/styles/base/_variables' as *;
 @use './app/styles/utils/_mixins' as _mixins;
 @use './app/styles/base/_base' as _base;
 
@@ -13,6 +13,9 @@
     overflow: hidden;
     margin-bottom: 2.2em;
     margin-top: 1em;
+    box-shadow: 0 0 0.5em 0.1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.2em;
+    background-color: $primary-color;
     
   }
 
@@ -28,6 +31,7 @@
     overflow: hidden;
     margin: 0 auto;
     transition: all 0.5s ease-in-out;
+    
     
   }
 
@@ -73,10 +77,10 @@
 
   .imgContainer:hover {
       transition: all 0.5s ease-in-out;
-      transform: scale(0.99);
-
-   
+      transform: scale(0.98);
   }
+
+
   @media screen and (max-width: 800px) {
     .main {
       width: 100%;
