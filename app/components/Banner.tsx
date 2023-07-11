@@ -31,18 +31,16 @@ export default function BannerImage() {
 
   return (
     <div className={styles.main}>
-      <div className={styles.img} onLoad={() => setLoading(false)}>
+      <div className={styles.imgContainer} onLoad={() => setLoading(false)}>
         <Image
           src={randomImage}
           alt="Banner Image"
           quality={100}
           width={1100}
-          height={500}
+          height={690}
           priority={true}
           style={{
-            maxWidth: "100%",
-            height: "auto",
-            marginBottom: "2rem",
+            objectFit: "cover",
             borderRadius: "0.2rem",
             boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
           }}
