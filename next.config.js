@@ -6,6 +6,10 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
 };
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    domains: ["images.ctfassets.net"],
+  },
+};
 
 module.exports = nextConfig;
