@@ -7,19 +7,11 @@ export default function Loading() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <div className={styles.spinnerCenter}>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
-          <div className={styles.spinnerBlade}></div>
+        <div className={styles.dotWave}>
+          <div className={styles.dotWaveDot}></div>
+          <div className={styles.dotWaveDot}></div>
+          <div className={styles.dotWaveDot}></div>
+          <div className={styles.dotWaveDot}></div>
         </div>
       </div>
     </main>
