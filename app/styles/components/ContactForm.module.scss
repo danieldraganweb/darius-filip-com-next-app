@@ -10,76 +10,74 @@
 //     overflow: hidden;
 // }
 
-// .container{
-//     box-sizing: border-box;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     width: 100%;
-//     max-width: 1100px;
-//     font-family: $primary-font;
-//     gap: 3rem;
-//     margin: 0 auto;
-//     margin-bottom: 3em;
-// }
+.container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: $primary-font;
+    gap: 3rem;
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
 
-//  .textContainer{
-//     text-align: justify;
-//     margin: 0 auto;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     width: 100%;
-//     max-width: 1100px;
-//     flex-basis: 50%;
-//     font-family: $primary-font;
+ .textContainer{
+    text-align: justify;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    flex-basis: 50%;
+    font-family: $primary-font;
     
     
-//     .buttonWApp{
-//         display: block;
-//         width: 100%;
-//         max-width: 20em;
-//         min-width: 10em;
-//         margin: 0 auto;
-//         border-radius: 0.5em;
-//         margin-bottom: 1.5em;
-//         margin-top: 1.5em;
-//         padding: 0.7rem;
-//         font-size: clamp(0.5rem, 5vw, 1.5rem);
-//         border: none;
-//         background-color: #075e54;
-//         color: $primary-color;
-//     }
+    .buttonWApp{
+        display: block;
+        width: 100%;
+        max-width: 20em;
+        min-width: 10em;
+        margin: 0 auto;
+        border-radius: 0.5em;
+        margin-bottom: 1.5em;
+        margin-top: 1.5em;
+        padding: 0.7rem;
+        font-size: clamp(0.5rem, 5vw, 1.5rem);
+        border: none;
+        background-color: #075e54;
+        color: $primary-color;
+    }
 
-//     .buttonWApp:hover {
-//         background-color: #128c7e;
-//         color: $primary-color;
+    .buttonWApp:hover {
+        background-color: #128c7e;
+        color: $primary-color;
 
-//     }
-//     .buttonWApp:active {
-//         background-color: #128c7e;
-//         color: $primary-color;
-//     }
+    }
+    .buttonWApp:active {
+        background-color: #128c7e;
+        color: $primary-color;
+    }
 
 
-//     a{
-//         text-decoration: none;
-//         color: $primary-color;
-//     }
+    a{
+        text-decoration: none;
+        color: $primary-color;
+    }
 
-//     h2{
-//     text-align: center;
-//     font-size: clamp(2rem, 5vw, 3rem);
-//     }
+    h2{
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    }
 
-//     .description{
-//         font-size: $font-size-normal;
-//         font-weight: 300;
-//         color: $secondary-color;
-//         font-size: clamp(1rem, 5vw, 1.5rem);
+    .description{
+        font-size: $font-size-normal;
+        font-weight: 300;
+        color: $secondary-color;
+        font-size: clamp(1rem, 5vw, 1.5rem);
       
-//     }
-//  }
+    }
+ }
 
 .formContainer {
     width: 100%;
@@ -92,7 +90,7 @@
     background-color: $primary-color;
     border-radius: 5px;
     font-family: $primary-font;
-    border: 2px solid $secondary-color;
+   
 
     h1 {
         font-size: $font-size-normal;
