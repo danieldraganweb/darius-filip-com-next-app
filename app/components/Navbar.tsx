@@ -117,7 +117,7 @@ const Navbar: React.FC = () => {
                   href="/bookshop"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Bookshop
+                  Shop
                 </Link>
               </li>
             </ul>

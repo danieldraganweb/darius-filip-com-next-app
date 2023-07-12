@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import styles from "./page.module.scss";
+import styles from "./styles/pages/page.module.scss";
 import { Suspense } from "react";
 import Loading from "./loading";
 

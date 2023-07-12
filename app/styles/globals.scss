@@ -1,7 +1,6 @@
 @use './app/styles/base/_variables' as *;
-@use './app/styles/utils/_mixins' as _mixins;
-@use './app/styles/base/_base' as _base;
-
+@use './app/styles/utils/_mixins' as *;
+@use 'app/styles/base/_base' as *;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Montserrat+Alternates:wght@400;700&family=Montserrat+Subrayada:wght@400;700&display=swap');
 
 
@@ -9,6 +8,7 @@ html {
   box-sizing: border-box;
   font-size: 16px; // This sets 1rem to be 10px
   height: 100vh;
+  font-family: $primary-font;                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 }
 
 *, *:before, *:after {
