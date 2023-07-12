@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
 import styles from "../styles/components/Banner.module.scss";
 import { createClient } from "contentful";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const client = createClient({
@@ -38,6 +37,7 @@ export default function Banner() {
               width={1100}
               height={700}
               alt={item.fields.imageName}
+              priority={true}
             />
           </div>
         );

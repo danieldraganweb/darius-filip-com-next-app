@@ -7,12 +7,11 @@ function Bookshop() {
     <main>
       <div className={styles.container}>
         <h1 className={styles.title}>Bookshop</h1>
-        <p className={styles.description}>Work in progres!</p>
         <Image
           src="/OIP.jpeg"
           alt="logo"
-          width={240}
-          height={240}
+          width={500}
+          height={500}
           quality={100}
         />
       </div>
