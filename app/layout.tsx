@@ -21,8 +21,7 @@ export default function RootLayout({
       <div className={styles.container}>
         <body className={inter.className}>
           <Navbar />
-          {/* <Suspense fallback={<Loading />}>{children}</Suspense> */}
-          {children}
+          <Suspense fallback={<Loading />}>{children}</Suspense>
           <Footer />
         </body>
       </div>
