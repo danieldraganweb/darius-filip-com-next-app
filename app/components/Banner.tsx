@@ -6,8 +6,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const client = createClient({
-  space: "zh7t5pom8ccw",
-  accessToken: "HBkgA0h_Q4IS0DoD436LAfMpvdsO4-SM98E6Sz3hEEM",
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID as string,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN as string,
 });
 
 export default function Banner() {
