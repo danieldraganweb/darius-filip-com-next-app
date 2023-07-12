@@ -13,6 +13,7 @@
     align-items: center;
     flex-direction: column;
     position: relative;
+    font-family: $primary-font;
 
     
 
@@ -21,10 +22,12 @@
         justify-content: center;
         align-items: center;
         position: absolute;
+       
         p{
             font-size: 2rem;
             font-weight: 600;
             color: $primary-color;
+            font-family: $primary-font;
         }
     }
     @media screen and (max-width: 800px){
@@ -40,6 +43,7 @@
             font-size: 3rem;
             font-weight: 100;
             color: $primary-color;
+            font-family: $primary-font;
         }
     }
 
