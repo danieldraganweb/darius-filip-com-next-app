@@ -13,6 +13,7 @@
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
     "contentful": "^10.3.4",
+    "dotenv": "^16.3.1",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.5",
     "next": "^13.4.9",
@@ -21,5 +22,19 @@
     "react-responsive": "^9.0.2",
     "sass": "^1.63.4",
     "typescript": "5.1.3"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieldraganweb/darius-filip-com-next-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danieldraganweb/darius-filip-com-next-app/issues"
+  },
+  "homepage": "https://github.com/danieldraganweb/darius-filip-com-next-app#readme"
 }
