@@ -39,7 +39,7 @@ function ContactForm() {
       <main className={styles.main}>
         <div className={styles.container}>
           <div className={styles.textContainer}>
-            <h1>Let&apos;s get in touch !</h1>
+            <h2>Let&apos;s get in touch !</h2>
             <p className={styles.description}>
               Whether you&apos;re interested in booking a photo shoot, have a
               question about my services, or just want to say hello, I&apos;m
@@ -58,6 +58,7 @@ function ContactForm() {
             </Link>
           </div>
           <div className={styles.formContainer}>
+            <h2>Drop an email</h2>
             <form onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name"></label>

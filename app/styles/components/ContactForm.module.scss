@@ -3,12 +3,13 @@
 @use './app/styles/base/_base' as _base;
 
 .main{
-  width: 100%;
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     box-sizing: border-box;
     overflow: hidden;
 }
+
 .container{
     box-sizing: border-box;
     display: flex;
@@ -17,26 +18,30 @@
     width: 100%;
     max-width: 1100px;
     font-family: $primary-font;
-    font-size: clamp(0.8rem, 5vw, 1.5rem);
     gap: 3rem;
     margin: 0 auto;
     margin-bottom: 3em;
-    padding: 0 1em;
 }
 
  .textContainer{
     text-align: justify;
     margin: 0 auto;
-    box-sizing: border-box;
-    font-size: clamp(0.5rem, 5vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    flex-basis: 50%;
+    font-family: $primary-font;
+    
     
     .buttonWApp{
         display: block;
-        margin: 0 auto;
         width: 100%;
         max-width: 20em;
+        min-width: 10em;
         margin: 0 auto;
-        border-radius: 5px;
+        border-radius: 0.5em;
         margin-bottom: 1.5em;
         margin-top: 1.5em;
         padding: 0.7rem;
@@ -51,20 +56,27 @@
         color: $primary-color;
 
     }
+    .buttonWApp:active {
+        background-color: #128c7e;
+        color: $primary-color;
+    }
+
 
     a{
         text-decoration: none;
         color: $primary-color;
     }
 
-    h1{
+    h2{
     text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
     }
 
     .description{
         font-size: $font-size-normal;
         font-weight: 300;
         color: $secondary-color;
+        font-size: clamp(1rem, 5vw, 1.5rem);
       
     }
  }
@@ -74,15 +86,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 50%;
-    max-width: 50%;
+    flex-basis: 50%;
     margin: 0 auto;
     background-color: $primary-color;
     border-radius: 5px;
-    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    font-size: clamp(1rem, 5vw, 1.5rem);
     font-family: $primary-font;
+    border: 2px solid $secondary-color;
 
     h1 {
         font-size: $font-size-normal;
@@ -92,7 +101,6 @@
     }
 
     input {
-        box-sizing: border-box;
         width: 100%;
         max-width: 20em;
         margin: 0 auto;
@@ -109,8 +117,8 @@
 
     textarea {
         width: 100%;
-        max-width: 18em;
-        min-width: 18em;
+        max-width: 20em;
+        min-width: 20em;
         margin: 0 auto;
         padding: 0.5rem;
         padding-left: 1em;
@@ -173,25 +181,21 @@
 
 @media (max-width: 800px) {
     .main {
-        width: 100%;
+        width: 90%;
         max-width: 100%;
+        margin: 0 auto;
     }
     .container {
         flex-direction: column;
         width: 100%;
-        max-width: 1100px;
-        gap: 1rem;
-        box-sizing: border-box;
-    }
-
-    .textContainer {
-        width: 100%;
-        padding: 1rem;
-        box-sizing: border-box;
-    }
-
-    .formContainer {
-        width: 100%;
         max-width: 100%;
+        gap: 0;
+    }
+    .textContainer {
+        flex-basis: 100%;
+        margin-bottom: 1em;
+    }
+    .formContainer {
+        flex-basis: 80%;
     }
 }
