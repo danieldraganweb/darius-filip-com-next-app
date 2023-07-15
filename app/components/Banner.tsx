@@ -10,8 +10,8 @@ import Image from "next/image";
 // }
 
 const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID as string,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+  space: "zh7t5pom8ccw",
+  accessToken: "HBkgA0h_Q4IS0DoD436LAfMpvdsO4-SM98E6Sz3hEEM",
 });
 
 export default function Banner() {
