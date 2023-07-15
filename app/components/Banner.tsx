@@ -5,9 +5,16 @@ import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+if (
+  !process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID ||
+  !process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
+) {
+  throw new Error("Contentful credentials are not defined");
+}
+
 const client = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID as string,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN as string,
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
 });
 
 export default function Banner() {
