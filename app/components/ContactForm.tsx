@@ -43,7 +43,7 @@ function ContactForm() {
             Whether you&apos;re interested in booking a photo shoot, have a
             question about my services, or just want to say hello, I&apos;m
             always happy to hear from you. Fill out the contact form or send me
-            an WhatsApp message, and I&apos;ll get back to you as soon as
+            a WhatsApp message, and I&apos;ll get back to you as soon as
             possible!
           </p>
           <h3>Prefer to chat?</h3>
