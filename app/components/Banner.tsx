@@ -5,9 +5,9 @@ import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-if (!process.env.CONTENTFUL_SPACE_ID || !process.env.CONTENTFUL_ACCESS_TOKEN) {
-  throw new Error("Contentful credentials are not defined");
-}
+// if (!process.env.CONTENTFUL_SPACE_ID || !process.env.CONTENTFUL_ACCESS_TOKEN) {
+//   throw new Error("Contentful credentials are not defined");
+// }
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID as string,
