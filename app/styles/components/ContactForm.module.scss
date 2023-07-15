@@ -1,47 +1,43 @@
 @use './app/styles/base/_variables' as *;
 @use './app/styles/utils/_mixins' as _mixins;
-@use './app/styles/base/_base' as _base;
-
-// .main{
-//     width: 100%;
-//     max-width: 1100px;
-//     margin: 0 auto;
-//     box-sizing: border-box;
-//     overflow: hidden;
-// }
+@use './app/styles/base/_base' as *;
 
 .container{
-    box-sizing: border-box;
+    width: 100%;
+    max-width: 1100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-family: $primary-font;
-    gap: 3rem;
     margin: 0 auto;
     margin-bottom: 3em;
+    box-sizing: border-box;
+    flex-basis: 100%;
+    gap: 3em;
 }
 
  .textContainer{
+    box-sizing: border-box;
     text-align: justify;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-basis: 50%;
     width: 100%;
     max-width: 1100px;
-    flex-basis: 50%;
     font-family: $primary-font;
+   
     
     
     .buttonWApp{
         display: block;
         width: 100%;
-        max-width: 20em;
+        max-width: 10em;
         min-width: 10em;
         margin: 0 auto;
-        border-radius: 0.5em;
+        border-radius: 0.2em;
         margin-bottom: 1.5em;
-        margin-top: 1.5em;
         padding: 0.7rem;
         font-size: clamp(0.5rem, 5vw, 1.5rem);
         border: none;
@@ -68,7 +64,14 @@
     h2{
     text-align: center;
     font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 300;
     }
+    
+    h3{
+        text-align: center;
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        font-weight: 300;}
+        color: $secondary-color;
 
     .description{
         font-size: $font-size-normal;
@@ -80,84 +83,75 @@
  }
 
 .formContainer {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    flex-basis: 100%;
-    margin: 0 auto;
-    background-color: $primary-color;
-    border-radius: 5px;
-    font-family: $primary-font;
+    align-items: center;
+    flex-basis: 50%;
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    
    
 
     h1 {
-        font-size: $font-size-normal;
+        font-size: clamp(1.5rem, 5vw, 2rem);
         margin-bottom: 1em;
         color: $secondary-color;
         font-weight: 300;
     }
 
-    input {
-        width: 100%;
-        max-width: 20em;
-        margin: 0 auto;
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: $font-size-small;
-        padding-bottom: 1em;
-        padding-top: 1em;
-        padding-left: 1em;
+    h2{
+        font-size: clamp(1.5rem, 5vw, 2rem);
         margin-bottom: 1em;
-        margin-top: 1em;
+        color: $secondary-color;
+        font-weight: 300;
     }
 
-    textarea {
+    input, textarea {
         width: 100%;
-        max-width: 20em;
-        min-width: 20em;
-        margin: 0 auto;
-        padding: 0.5rem;
-        padding-left: 1em;
-        padding-top: 1em;
+        min-width: 450px;
+        max-width: 450px;
         border: 1px solid #ccc;
         border-radius: 5px;
         font-size: $font-size-small;
-        padding-bottom: 12em;
-        box-sizing: content-box;
+        padding: 1em;
+        margin-bottom: 1em;
         font-family: $primary-font;
-    }
-
-    .buttonContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 20em;
-        margin: 0 auto;
-        border-radius: 5px;
-        margin-bottom: 1.5em;
-        margin-top: 1.5em;
+        box-sizing: border-box;
     }
     
+    input {
+        overflow: hidden;
+    }
+    
+    textarea {
+        height: auto;
+        max-height: 350px;
+        max-width: 450px;
+        padding-bottom: 5em;
+    }
+
     button {
+        display: block;
         width: 100%;
-        max-width: 20em;
+        max-width: 10em;
+        min-width: 10em;
+        margin: 0 auto;
+        border-radius: 0.2em;
         padding: 0.7rem;
+        font-size: clamp(0.5rem, 5vw, 1.5rem);
         border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: $font-size-small;
         background-color: $secondary-color;
-        color: $primary-color;
-        cursor: pointer;
-        box-sizing: border-box;
+        color: $primary-color;   
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        box-shadow: #ccc 0px 0px 5px 0px;
     
     }
     button:hover {
         background-color: $senary-color;
-        color: $secondary-color;
+        color: $primary-color;
 
     }
     
@@ -169,6 +163,10 @@
     button:focus {
         outline: none;
     }
+    button:disabled {
+        background-color: $senary-color;
+        color: $primary-color;
+    }
 
     .error {
         color: $tertiary-color;
@@ -178,23 +176,126 @@
     
 }
 
-@media (max-width: 800px) {
-    .main {
-        width: 90%;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-    .container {
+@media screen and (max-width: 768px) {
+    .container{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .textContainer{
+        flex-basis: 80%;
+        width: 80%;
+        max-width: 100%;
+        margin-bottom: 1em;
+        padding: 0.5em;
+    }
+
+    .formContainer{
+        flex-basis: 100%;
         width: 100%;
         max-width: 100%;
-        gap: 0;
-    }
-    .textContainer {
-        flex-basis: 100%;
         margin-bottom: 1em;
+        padding: 0.5em;
+
+        textarea, input{
+            min-width: 550px;
+            max-width: 550px;
+        }
     }
-    .formContainer {
+}
+
+@media screen and (max-width: 500px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .textContainer{
         flex-basis: 80%;
+        width: 80%;
+        max-width: 100%;
+        margin-bottom: 1em;
+        padding: 0.5em;
+    }
+
+    .formContainer{
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1em;
+        padding: 0.5em;
+
+        textarea, input{
+            min-width: 350px;
+            max-width: 350px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .textContainer{
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+
+    .formContainer{
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        box-sizing: border-box;
+
+        textarea, input{
+            min-width: 350px;
+            max-width: 350px;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .textContainer{
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+
+    .formContainer{
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        box-sizing: border-box;
+
+        textarea, input{
+            min-width: 350px;
+            max-width: 350px;
+        }
     }
 }
