@@ -58,7 +58,7 @@ function ContactForm() {
             </Link>
           </div>
           <div className={styles.formContainer}>
-            <h2>Let&rsquo;s get in touch!</h2>
+            {/* <h2>Let&rsquo;s get in touch!</h2> */}
             <form onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name"></label>
