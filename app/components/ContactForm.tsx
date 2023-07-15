@@ -48,7 +48,7 @@ function ContactForm() {
               possible!
             </p>
             <Link
-              href="https://api.whatsapp.com/send/?phone=+4560515731&text&type=phone_number&app_absent=0"
+              href="https://wa.me/+4560515731"
               target="_blank"
               rel="noopener noreferrer"
             >
