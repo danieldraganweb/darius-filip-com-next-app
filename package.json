@@ -16,7 +16,7 @@
     "dotenv": "^16.3.1",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.5",
-    "next": "^13.4.9",
+    "next": "^13.4.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-responsive": "^9.0.2",
@@ -25,7 +25,6 @@
   },
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "main": "next.config.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danieldraganweb/darius-filip-com-next-app.git"
