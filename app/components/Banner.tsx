@@ -4,15 +4,7 @@ import styles from "../styles/components/Banner.module.scss";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-
-// if (!process.env.CONTENTFUL_SPACE_ID || !process.env.CONTENTFUL_ACCESS_TOKEN) {
-//   throw new Error("Contentful credentials are not defined");
-// }
-
-const client = createClient({
-  space: "zh7t5pom8ccw",
-  accessToken: "HBkgA0h_Q4IS0DoD436LAfMpvdsO4-SM98E6Sz3hEEM",
-});
+import { client } from "../lib/contentful/client.js";
 
 export default function Banner() {
   // const [dataFields, setDataFields] = useState({} as any);
