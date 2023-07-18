@@ -15,8 +15,6 @@
     margin-top: 1em;
     box-shadow: 0 0 0.5em 0.1em rgba(0, 0, 0, 0.2);
     border-radius: 0.2em;
-    background-color: $primary-color;
-    
   }
 
   .imgContainer {
@@ -31,8 +29,6 @@
     overflow: hidden;
     margin: 0 auto;
     transition: all 0.5s ease-in-out;
-    
-    
   }
 
   .object-contain {
@@ -87,7 +83,7 @@
       max-width: 1100px;
     }
     .imgContainer {
-      width: 98%;
+      width: 100%;
       max-width: 1100px;
       margin: 0 auto;
       overflow: hidden;
