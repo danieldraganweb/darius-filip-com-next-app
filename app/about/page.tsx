@@ -11,10 +11,10 @@ function About() {
         </div>
         <div className={styles.titleContainer}>
           <h3 className={styles.title}>
-            Greetings and welcome to my About section. My name is Darius Filip,
-            and I`m a Romanian-born photographer, based in Copenhagen, Denmark.
-            I`m thrilled that you took the time to read about my journey in
-            photography.
+            Greetings and welcome to my &quot; About &quot; section. My name is
+            Darius Filip, and I`m a Romanian-born photographer, based in
+            Copenhagen, Denmark. I`m thrilled that you took the time to read
+            about my journey in photography.
           </h3>
         </div>
       </header>
