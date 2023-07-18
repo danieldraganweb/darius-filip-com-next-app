@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "../styles/components/Banner.module.scss";
-import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { client } from "../lib/contentful/client.js";

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/components/ProfilePicture1.module.scss";
+import styles from "../styles/components/ProfilePicture.module.scss";
 
 function ProfileImg() {
   return (

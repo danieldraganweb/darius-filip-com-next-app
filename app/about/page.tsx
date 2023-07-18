@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileImg from "../components/ProfilePicture1";
+import ProfileImg from "../components/ProfilePicture";
 import styles from "../styles/pages/about.module.scss";
 
 function About() {
