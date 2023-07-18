@@ -3,7 +3,7 @@
 import styles from "../styles/components/Banner.module.scss";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { client } from "../lib/contentful/client.js";
+import { client } from "../lib/contentful/client";
 
 export default function Banner() {
   // const [dataFields, setDataFields] = useState({} as any);

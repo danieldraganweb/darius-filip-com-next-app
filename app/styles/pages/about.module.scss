@@ -52,7 +52,7 @@
   padding: 0;
   text-align: justify;
   width: 100%;
-    // border: 2px solid $secondary-color;
+  font-weight: 100;
 }
 
 .section{
@@ -186,7 +186,7 @@
     padding: 0;
     font-size: $font-size-large;
     font-size: clamp(1rem, 2vw, 1.5rem);
-    font-weight: 500;
+  
    
 }
   
