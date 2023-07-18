@@ -55,10 +55,10 @@
       display: flex;
       flex-direction: column;
       background-color:$primary-color;
-      position: absolute;
+      position: fixed;
       margin: 0 auto;
       width: 100%;
-      max-width: 800px;
+      max-width: 1100px;
       top: 0;
       bottom: 0;
       left: 0;
@@ -72,9 +72,13 @@
       padding-left: 1em;
       padding-right: 1em;
       font-size: $font-size-small;
-      z-index: 999;
+      z-index: 9999;
       padding-bottom: 15em;
       padding-top: 7em;
+      height: 100vh;
+      transform: translateY(0%);
+      transition: transform 3s ease-in-out;
+      
     
       
       
@@ -90,6 +94,10 @@
       color: gray;
       margin: 0 auto;
       display: flex;
+    }
+    body {
+      display: none;
+
     }
     
   }
