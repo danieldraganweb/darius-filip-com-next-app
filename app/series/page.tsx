@@ -1,13 +1,16 @@
 "use client";
 import React from "react";
 import styles from "../styles/pages/series.module.scss";
+import Gallery from "../components/Gallery";
 
 function Series() {
   return (
     <main>
+      <div className={styles.titleContainer}>
+        <h1 className={styles.title}>Series Page</h1>
+      </div>
       <div className={styles.container}>
-        <h1>Series Page</h1>
-        <p>Work in progres!</p>
+        <Gallery />
       </div>
     </main>
   );
