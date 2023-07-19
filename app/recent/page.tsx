@@ -19,7 +19,7 @@ export default function Recent() {
       "2hLiAzNJ7JfDpsqD9qyNnY"
     )) as any;
 
-    console.log(listOfRecentImagesResp);
+    // console.log(listOfRecentImagesResp);
 
     const listOfRecentImages = listOfRecentImagesResp.fields?.images?.map(
       (image: any) => {
@@ -36,6 +36,7 @@ export default function Recent() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
+        <h1 className={styles.title}>Recent Work Gallery</h1>
         {imagesRecent.map((src: string, i: number) => (
           <div key={i} className={styles.imgContainer}>
             <ul className={styles.imgList}>
