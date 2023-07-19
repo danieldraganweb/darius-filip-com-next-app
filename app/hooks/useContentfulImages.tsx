@@ -11,13 +11,13 @@ const client = createClient({
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN || "",
 });
 
-export default function useContentfulImages() {
+export default function ContentfulImages() {
   const [loading, setLoading] = useState(true);
-  const [imagesContentful, setImagesContentful] = useState([] as any);
+  const [imagesContentful, setImagesContentful] = useState([] as string[]);
 
   const getDataAndUpdateState = async () => {
     const listOfContentfulImagesResp = (await client.getEntry(
-      "36YtD224k7EESV2RlzF2eL"
+      "4o0r5Ho4L7HzPy5Jx5hQTY"
     )) as any;
     console.log(listOfContentfulImagesResp);
 
@@ -37,14 +37,38 @@ export default function useContentfulImages() {
     <main className={styles.main}>
       <div className={styles.container}>
         <div className={styles.imgContainer}>
-          <Image
-            src={imagesContentful[0]}
-            alt="Recent Image"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            onLoad={() => setLoading(false)}
-          />
+          {imagesContentful.map((src: string, i: number) => (
+            <div key={i} className={styles.imgContainer}>
+              <ul className={styles.imgList}>
+                <li className={styles.imgItem}>
+                  <Image
+                    loading="eager"
+                    src={src}
+                    alt={`Recent Image ${i}`}
+                    width={300}
+                    height={300}
+                    layout="responsive"
+                    objectFit="cover"
+                    quality={100}
+                    priority={true}
+                    blurDataURL="/main-img-1.jpg"
+                    style={{
+                      borderRadius: "0.2em",
+                      boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
+                    }}
+                    className={` ${styles["duration-700"]} ${
+                      styles["ease-in-out"]
+                    } ${styles["group-hover:opacity-75"]} ${
+                      loading
+                        ? `${styles["scale-110"]} ${styles["blur-2xl"]} ${styles["grayscale"]}`
+                        : `${styles["scale-100"]} ${styles["blur-0"]} ${styles["grayscale-0"]}`
+                    }`}
+                    onLoadingComplete={() => setLoading(false)}
+                  />
+                </li>
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </main>
