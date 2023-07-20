@@ -1,25 +1,21 @@
-"use client";
 import styles from "../../styles/pages/slug.module.scss";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { client } from "../../lib/contentful/client";
 import Image from "next/image";
 
-interface GalleryProps {
-  slug: string;
-}
-
-export default function Gallery({ slug }: GalleryProps) {
+export default function Gallery() {
   const [loading, setLoading] = useState(true);
   const [seriesGallery, setSeriesGallery] = useState([] as string[]);
 
   const getDataAndUpdateState = async () => {
     const seriesGalleryResp = await client.getEntries({
       content_type: "photoSeriesComponent",
-      "fields.slug": slug,
     });
 
-    const seriesGalleryEntry = seriesGalleryResp.items[4];
+    const seriesGalleryEntry = seriesGalleryResp.items.find((entry: any) => {
+      return entry.fields.images && entry.fields.images.length > 0;
+    });
 
     const images = seriesGalleryEntry?.fields.images || [];
 
@@ -33,7 +29,7 @@ export default function Gallery({ slug }: GalleryProps) {
 
   useEffect(() => {
     getDataAndUpdateState();
-  });
+  }, []);
 
   return (
     <main className={styles.main}>
