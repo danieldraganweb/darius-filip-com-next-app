@@ -1,10 +1,7 @@
 "use client";
 import React from "react";
 import styles from "../styles/pages/series.module.scss";
-import Gallery from "../components/Gallery";
 import { createClient } from "contentful";
-import useContentfulImages from "../hooks/useContentfulImages";
-import { Entry } from "../types";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
