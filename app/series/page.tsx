@@ -7,7 +7,7 @@ function Series() {
   return (
     <main>
       <div className={styles.titleContainer}>
-        <h1 className={styles.title}>Series Page</h1>
+        <h1 className={styles.title}>Series</h1>
       </div>
       <div className={styles.container}>
         <Gallery />
