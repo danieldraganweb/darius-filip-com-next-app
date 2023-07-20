@@ -13,9 +13,9 @@ const Navbar: React.FC = () => {
     if (!menuOpen) {
       document.body.style.overflow = "hidden";
     }
-    if (menuOpen) {
-      document.body.style.overflow = "hidden auto";
-    }
+    // if (menuOpen) {
+    //   document.body.style.overflow = "hidden auto";
+    // }
     setMenuOpen(!menuOpen);
   };
 
