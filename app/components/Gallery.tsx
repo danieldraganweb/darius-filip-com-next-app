@@ -52,7 +52,6 @@ export default function Gallery() {
                       boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
                     }}
                     className={` ${styles["duration-700"]} ${styles["ease-in-out"]}`}
-                    onLoad={() => loading}
                     onLoadingComplete={() => setLoading(false)}
                   />
                 </li>
