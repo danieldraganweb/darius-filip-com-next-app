@@ -4,7 +4,7 @@ import styles from "../styles/pages/recent.module.scss";
 import { useState, useEffect, use } from "react";
 import Image from "next/image";
 import { createClient } from "contentful";
-import { Entry } from "../types";
+// import { Entry } from "../types";
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || "",
