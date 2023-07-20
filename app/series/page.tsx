@@ -1,28 +1,24 @@
 "use client";
-import React from "react";
 import styles from "../styles/pages/series.module.scss";
-import { createClient } from "contentful";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-
-const client = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || "",
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN || "",
-});
+import { client } from "../lib/contentful/client";
 
 function Series() {
   const [loading, setLoading] = useState(true);
   const [seriesTitle, setSeriesTitle] = useState([] as string[]);
   loading;
   const getDataAndUpdateState = async () => {
-    const listOfTitlesResp = (await client.getEntries({})) as any;
-    console.log(listOfTitlesResp);
+    const listOfTitlesResp = (await client.getEntries({
+      content_type: "photoSeriesComponent",
+    })) as any;
+    // console.log(listOfTitlesResp);
 
     const listOfTitles = listOfTitlesResp.items?.map((title: any) => {
       return title.fields.title;
     });
 
-    console.log(listOfTitles);
+    // console.log(listOfTitles);
 
     // Keep only the elements 2, 3, 4, 5, 6, and 8 from the array
     const filteredTitles = listOfTitles
