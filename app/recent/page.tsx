@@ -36,7 +36,7 @@ export default function Recent() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h1 className={styles.title}>Recent Work Gallery</h1>
+        <h1 className={styles.title}>Recent</h1>
         {imagesRecent.map((src: string, i: number) => (
           <div key={i} className={styles.imgContainer}>
             <ul className={styles.imgList}>

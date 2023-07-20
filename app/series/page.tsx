@@ -5,12 +5,12 @@ import Gallery from "../components/Gallery";
 
 function Series() {
   return (
-    <main>
-      <div className={styles.titleContainer}>
-        <h1 className={styles.title}>Series</h1>
-      </div>
+    <main className={styles.main}>
       <div className={styles.container}>
-        <Gallery />
+        <h1 className={styles.title}>Series</h1>
+        <div className={styles.imgContainer}>
+          <Gallery />
+        </div>
       </div>
     </main>
   );

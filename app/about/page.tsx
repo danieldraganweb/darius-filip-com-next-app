@@ -11,10 +11,10 @@ function About() {
         </div>
         <div className={styles.titleContainer}>
           <h3 className={styles.title}>
-            Greetings and welcome to my &quot; About &quot; section. My name is
-            Darius Filip, and I`m a Romanian-born photographer, based in
-            Copenhagen, Denmark. I`m thrilled that you took the time to read
-            about my journey in photography.
+            Greetings! I&rsquo;m Darius Filip, a Romanian-born photographer now
+            based in Copenhagen, Denmark after stints living in Germany and
+            exploring the world. I&rsquo;m thrilled that you took the time to
+            read about my journey in photography.
           </h3>
         </div>
       </header>
@@ -26,6 +26,7 @@ function About() {
             significant change, and growing up during that time certainly had an
             impact on my outlook on life.
           </p>
+
           <p className={styles.description}>
             Photography did not play a significant role in my early years. While
             my family owned a point-and-shoot camera, I only took pictures for
@@ -35,8 +36,16 @@ function About() {
             it was enough to spark a passion for photography within me. From
             that day on, I started carrying a camera with me wherever I went. I
             found myself drawn to capturing moments and emotions, documenting
-            life`s beauty and struggles, and discovering the world through the
-            lens of my camera.
+            life&rsquo;s beauty and struggles, and discovering the world through
+            the lens of my camera.
+          </p>
+          <p className={styles.description}>
+            In 2010, I moved to Hamburg, Germany where I resided for the next 8
+            years. With my trusty camera in hand, I documented my experiences
+            living in Hamburg through street photography and landscapes. After
+            honing my skills in Germany, I relocated to Copenhagen, Denmark in
+            2018. The vibrancy and scenery of Copenhagen have provided endless
+            inspiration for my photography over the last 5 years of living here.
           </p>
           <p className={styles.description}>
             As my love for photography grew, so did my skills. I invested time
@@ -44,15 +53,15 @@ function About() {
             different techniques, and studying the works of other photographers.
             I took on various projects, ranging from portrait photography to
             landscape photography, to capture the beauty and complexities of the
-            world around us.
+            world around us. As I experimented with composition, lighting, and
+            telling visual stories, I was hooked on the craft.
           </p>
           <p className={styles.description}>
-            As I honed my skills, my passion for photography turned into a
-            profession. I started taking on clients and working on various
-            commercial and personal projects. With each new project, I learned
-            something new and pushed myself to improve. My photography style is
-            characterized by a strong emphasis on capturing emotions and telling
-            stories through images.
+            I mainly shoot 35mm film which adds a unique organic texture to my
+            style defined by emotional, narrative images that reflect my view of
+            the world. My goal isn&rsquo;t just pretty pictures, but using
+            photography to connect with people and invite them to see things
+            from a new perspective.
           </p>
           <p className={styles.description}>
             I believe that photography is not just about taking pretty pictures
@@ -61,6 +70,18 @@ function About() {
             resonate with my audience and evoke an emotional response. I hope to
             inspire others to appreciate the beauty of the world and the people
             in it, and to see things from a different perspective.
+          </p>
+          <p className={styles.description}>
+            Some of my favourite photographers who inspire me are Steve McCurry
+            for his ability to capture human emotion, Henri Cartier-Bresson for
+            his decisive moments, and Mark Power for his thought-provoking
+            conceptual projects.
+          </p>
+          <p className={styles.description}>
+            If my photos resonate with you, I invite you to get in touch!
+            Let&rsquo;s have a conversation about the images and perspectives
+            that move you. I&rsquo;m always looking to collaborate with new
+            clients and continue growing as an artist.
           </p>
         </div>
       </section>
