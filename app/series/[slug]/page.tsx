@@ -33,7 +33,7 @@ export default function Gallery({ slug }: GalleryProps) {
 
   useEffect(() => {
     getDataAndUpdateState();
-  }, [slug]);
+  });
 
   return (
     <main className={styles.main}>
