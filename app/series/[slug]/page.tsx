@@ -6,7 +6,7 @@ import { client } from "../../lib/contentful/client";
 import { AllEntries, Item } from "../../types";
 // Fetch Galleries
 
-export const useEntry = (id: string) => {
+const useEntry = (id: string) => {
   const [loading, setLoading] = useState(false);
   const [entry, setEntry] = useState({} as Item);
 
