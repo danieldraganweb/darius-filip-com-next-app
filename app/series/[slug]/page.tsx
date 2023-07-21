@@ -34,12 +34,11 @@ const GalleryPage = (props: any) => {
 
       {entry.fields?.images.length > 0
         ? entry.fields?.images?.map((item: any, i: number) => {
-            console.log("xsds", item);
             return (
               <div key={i}>
                 <Image
                   loading="eager"
-                  src={item.fields.file.url}
+                  src={"https:" + item.fields.file.url}
                   alt={`Recent Image ${i}`}
                   width={300}
                   height={300}
