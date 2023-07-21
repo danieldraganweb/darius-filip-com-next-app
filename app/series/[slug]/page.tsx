@@ -1,58 +1,54 @@
 "use client";
 import styles from "../../styles/pages/slug.module.scss";
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { client } from "../../lib/contentful/client";
 import Image from "next/image";
+import { client } from "../../lib/contentful/client";
+import { Entry } from "../../types";
+// Fetch Galleries
 
-export default function Gallery() {
-  const [loading, setLoading] = useState(true);
-  const [seriesGallery, setSeriesGallery] = useState([] as string[]);
+export const useEntry = (id: string) => {
+  const [loading, setLoading] = useState(false);
+  const [entry, setEntry] = useState({} as Entry);
 
-  const getDataAndUpdateState = async () => {
-    const seriesGalleryResp = await client.getEntries({
-      content_type: "photoSeriesComponent",
-    });
-
-    const seriesGalleryEntry = seriesGalleryResp.items.find((entry: any) => {
-      return entry.fields.images && entry.fields.images.length > 0;
-    });
-
-    const images = seriesGalleryEntry?.fields.images || [];
-
-    const seriesGallery = images.map((image: any) => {
-      return "https:" + image.fields.file.url;
-    });
-
-    setSeriesGallery(seriesGallery);
+  const getSingleEntry = async (id: string) => {
+    setLoading(true);
+    const response = (await client.getEntry(id)) as unknown as Entry;
+    setEntry(response);
     setLoading(false);
   };
 
   useEffect(() => {
-    getDataAndUpdateState();
+    getSingleEntry(id);
   }, []);
 
+  return { entry, setEntry, title: entry.fields?.title, loading };
+};
+
+const GalleryPage = (props: any) => {
+  const { title, loading, entry } = useEntry(props.id);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <h1 className={styles.title}>Series Gallery</h1>
-        {seriesGallery.map((src: string, i: number) => (
-          <div key={i} className={styles.imgContainer}>
-            <ul>
-              <li>
+    <div>
+      <p>Gallery Page - {title}</p>
+      <p>{loading ? "Loading..." : null}</p>
+
+      {entry.fields?.images.length > 0
+        ? entry.fields?.images?.map((item: any, i: number) => {
+            console.log("xsds", item);
+            return (
+              <div key={i}>
                 <Image
-                  src={src}
-                  alt="Picture of the author"
+                  src={"https:" + item.fields.file.url}
+                  alt={`Image ${i}`}
                   width={500}
                   height={500}
-                  layout="responsive"
-                  loading="lazy"
                 />
-              </li>
-            </ul>
-          </div>
-        ))}
-      </div>
-    </main>
+              </div>
+            );
+          })
+        : null}
+    </div>
   );
-}
+};
+
+export default GalleryPage;

@@ -43,7 +43,6 @@ export default function Recent() {
                   width={300}
                   height={300}
                   layout="responsive"
-                  objectFit="cover"
                   quality={100}
                   priority={true}
                   blurDataURL="/main-img-1.jpg"
