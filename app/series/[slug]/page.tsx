@@ -3,16 +3,16 @@ import styles from "../../styles/pages/slug.module.scss";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { client } from "../../lib/contentful/client";
-import { Entry } from "../../types";
+import { AllEntries, Item } from "../../types";
 // Fetch Galleries
 
 export const useEntry = (id: string) => {
   const [loading, setLoading] = useState(false);
-  const [entry, setEntry] = useState({} as Entry);
+  const [entry, setEntry] = useState({} as Item);
 
   const getSingleEntry = async (id: string) => {
     setLoading(true);
-    const response = (await client.getEntry(id)) as unknown as Entry;
+    const response = (await client.getEntry(id)) as unknown as Item;
     setEntry(response);
     setLoading(false);
   };
@@ -25,7 +25,7 @@ export const useEntry = (id: string) => {
 };
 
 const GalleryPage = (props: any) => {
-  const { title, loading, entry } = useEntry(props.id);
+  const { title, loading, entry } = useEntry(props.params.slug);
 
   return (
     <div>
