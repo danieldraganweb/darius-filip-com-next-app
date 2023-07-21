@@ -12,7 +12,6 @@
   line-height: 1.5;
   box-sizing: border-box;
   scroll-behavior: smooth;
-
   background-color: none;
 }
 
@@ -88,6 +87,7 @@
   overflow: hidden;
   margin: 0 auto;
   transition: all 0.5s ease-in-out;
+  margin-top: 0.7em;
 
   a{
     text-decoration: none;
@@ -183,7 +183,7 @@
     max-width: 1100px;
     margin: 0 auto;
     overflow: hidden;
-    margin-bottom: 0.7em;
+    margin-top: 0.7em;
   }
 }
 .title{

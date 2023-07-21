@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  margin-bottom: 1em;
+  margin-bottom: 5em;
 }
 
 .imgContainer {
@@ -30,10 +30,11 @@
   max-width: 1100px;
   min-width: none;
   background-clip: content-box;
-  border-radius: 0.2em;// 
+  border-radius: 0.2em;
   overflow: hidden;
   margin: 0 auto;
   transition: all 0.5s ease-in-out;
+  margin-top: 0.7em;
   
 
   li{
@@ -126,7 +127,7 @@
     max-width: 1100px;
     margin: 0 auto;
     overflow: hidden;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.7em;
   }
 }
 .title{
