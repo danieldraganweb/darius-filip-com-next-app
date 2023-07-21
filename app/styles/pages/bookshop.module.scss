@@ -2,6 +2,7 @@
 @use './app/styles/utils/_mixins' as _mixins;
 @use './app/styles/base/_base' as _base;
 
+
 .main {
   width: 100%;
   max-width: 1100px;
@@ -10,6 +11,7 @@
   margin: 0 auto;
   line-height: 1.5;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -17,5 +19,167 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  margin-bottom: 1em;
+  margin-bottom: 5em;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: $primary-color;
+  border: none;
+  color: $secondary-color;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 10em;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  border: 1px solid $thirteenth-color;
+  font-family: $primary-font;
+  margin-top: 28vh;
+  margin-bottom: 20vh;
+  }
+
+.button:hover {
+  background-color: $secondary-color;
+  color: $primary-color;
+  border: 1px solid $thirteenth-color;
+}
+ .button:active {
+  background-color: $secondary-color;
+  color: $primary-color;
+  border: 1px solid $thirteenth-color;
+  transform: translateY(0.5rem);
+
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.5s;
+
+}
+
+.button:hover:before {
+  transform: scaleX(1.2) scaleY(1.4);  
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  min-width: none;
+  background-clip: content-box;
+  border-radius: 0.2em;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: all 0.5s ease-in-out;
+  margin-top: 0.7em;
+  
+
+  li{
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    
+  }
+  
+  ul{
+    margin: 0 auto;
+    padding: 0;
+  }
+  // :hover {
+  //   transform: scale(0.99);
+  //   transition: all 0.2s ease-in-out;
+  // }
+}
+
+.title{
+  font-size: clamp(1.5rem, 5vw, 1.8rem);
+  font-weight: 300;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  text-align: center;
+  font-family: $primary-font;
+  top: 0;
+  color: $secondary-color;
+  background-color: $primary-color;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  box-sizing: border-box; 
+  letter-spacing: 0.2em;
+  border: 1px solid $thirteenth-color;
+  
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+.duration-700 {
+  transition-duration: 1300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.group-hover\:opacity-75:hover {
+  transition: all 0.5s ease-in-out;
+}
+
+.scale-110 {
+  transform: scale(1.1);
+}
+
+.blur-2xl {
+  filter: blur(16px);
+}
+
+.grayscale {
+  filter: blur(70%);
+}
+
+.scale-100 {
+  transform: scale(1);
+}
+
+.blur-0 {
+  filter: blur(1);
+}
+
+.grayscale-0 {
+  filter: grayscale(0);
+}
+
+
+@media screen and (max-width: 800px) {
+  .main {
+    width: 100%;
+    max-width: 1100px;
+   
+  }
+  .imgContainer {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 0.7em;
+  }
+}
+.title{
+  
+  font-weight: 300;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  text-align: center;
+  font-family: $primary-font;
+  top: 0;
 }
