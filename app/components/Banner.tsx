@@ -5,8 +5,8 @@ import { useState, useEffect, use } from "react";
 import Image from "next/image";
 import { createClient } from "contentful";
 import { useMediaQuery } from "react-responsive";
-import { Entry } from "../types";
-import { useEntry } from "../series/[slug]/page";
+// import { Entry } from "../types";
+// import { useEntry } from "../series/[slug]/page";
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || "",
@@ -21,8 +21,8 @@ export default function Banner() {
   const [imagesMobile, setImagesMobile] = useState([] as any);
   const [imagesDesktop, setImagesDesktop] = useState([] as any);
 
-  const { entry: firtsEntry } = useEntry("36YtD224k7EESV2RlzF2eL");
-  const { entry: secondEntry } = useEntry("3rtL07Wp9oahy3A85XCQO5");
+  // const { entry: firtsEntry } = useEntry("36YtD224k7EESV2RlzF2eL");
+  // const { entry: secondEntry } = useEntry("3rtL07Wp9oahy3A85XCQO5");
 
   useEffect(() => {
     const images = isMobile ? imagesMobile : imagesDesktop;
