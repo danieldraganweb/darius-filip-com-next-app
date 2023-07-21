@@ -19,7 +19,7 @@ const useEntry = (id: string) => {
 
   useEffect(() => {
     getSingleEntry(id);
-  }, []);
+  }, [id]);
 
   return { entry, setEntry, title: entry.fields?.title, loading };
 };
@@ -38,10 +38,26 @@ const GalleryPage = (props: any) => {
             return (
               <div key={i}>
                 <Image
-                  src={"https:" + item.fields.file.url}
-                  alt={`Image ${i}`}
-                  width={500}
-                  height={500}
+                  loading="eager"
+                  src={item.fields.file.url}
+                  alt={`Recent Image ${i}`}
+                  width={300}
+                  height={300}
+                  layout="responsive"
+                  quality={100}
+                  priority={true}
+                  blurDataURL="/main-img-1.jpg"
+                  style={{
+                    borderRadius: "0.2em",
+                    boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
+                  }}
+                  className={` ${styles["duration-700"]} ${
+                    styles["ease-in-out"]
+                  } ${styles["group-hover:opacity-75"]} ${
+                    loading
+                      ? `${styles["scale-110"]} ${styles["blur-2xl"]} ${styles["grayscale"]}`
+                      : `${styles["scale-100"]} ${styles["blur-0"]} ${styles["grayscale-0"]}`
+                  }`}
                 />
               </div>
             );
