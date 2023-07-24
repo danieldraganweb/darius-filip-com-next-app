@@ -53,7 +53,10 @@
     .buttonWApp:active {
         background-color: #128c7e;
         color: $primary-color;
+        transition: all 0.2s ease-in-out;
+        transform: scale(0.95);
     }
+   
 
 
     a{
@@ -142,8 +145,8 @@
         padding: 0.7rem;
         font-size: clamp(0.5rem, 5vw, 1.5rem);
         border: 1px solid #ccc;
-        background-color: $secondary-color;
-        color: $primary-color;   
+        background-color: $primary-color;
+        color: $secondary-color;   
         margin-top: 1em;
         margin-bottom: 1.5em;
         box-shadow: #ccc 0px 0px 5px 0px;
@@ -157,14 +160,20 @@
     
     button:active {
         background-color: $senary-color;
-        color: $secondary-color;
+        color: $primary-color;
+        transition: all 0.2s ease-in-out;
+        transform: scale(0.95);
     }
 
     button:focus {
         outline: none;
     }
-    button:disabled {
-        background-color: $senary-color;
+    .button:disabled {
+        background-color: #ffffff;
+        color: $primary-color;
+    }
+    .button:required {
+        background-color: #ff0000;
         color: $primary-color;
     }
 

@@ -106,7 +106,12 @@ function ContactForm() {
                 required
                 placeholder="Message"
               />
-              <button type="submit">{status}</button>
+              <button
+                type="submit"
+                disabled={!name || !email || !subject || !message}
+              >
+                {status}
+              </button>
             </div>
           </form>
         </div>
