@@ -12,9 +12,9 @@ function About() {
         <div className={styles.titleContainer}>
           <h3 className={styles.title}>
             Greetings! I&rsquo;m Darius Filip, a Romanian-born photographer now
-            based in Copenhagen, Denmark after stints living in Germany and
-            exploring the world. I&rsquo;m thrilled that you took the time to
-            read about my journey in photography.
+            based in Copenhagen, Denmark, after many years of living in Germany
+            and exploring the world. I&rsquo;m thrilled that you took the time
+            to read about my journey in photography.
           </h3>
         </div>
       </header>
