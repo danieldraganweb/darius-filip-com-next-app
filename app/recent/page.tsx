@@ -30,8 +30,8 @@ export default function Recent() {
 
   return (
     <main className={styles.main}>
+      <h1 className={styles.title}>Recent</h1>
       <div className={styles.container}>
-        <h1 className={styles.title}>Recent</h1>
         {imagesRecent.map((src: string, i: number) => (
           <div key={i} className={styles.imgContainer}>
             <ul className={styles.imgList}>
@@ -40,8 +40,8 @@ export default function Recent() {
                   loading="eager"
                   src={src}
                   alt={`Recent Image ${i}`}
-                  width={300}
-                  height={300}
+                  width={1000}
+                  height={800}
                   layout="responsive"
                   quality={100}
                   priority={true}
@@ -49,6 +49,7 @@ export default function Recent() {
                   style={{
                     borderRadius: "0.2em",
                     boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
+                    objectFit: "contain",
                   }}
                   className={` ${styles["duration-700"]} ${
                     styles["ease-in-out"]

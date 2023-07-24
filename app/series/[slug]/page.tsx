@@ -29,8 +29,8 @@ const GalleryPage = (props: any) => {
 
   return (
     <main className={styles.main}>
+      <h1 className={styles.title}>{title}</h1>
       <div className={styles.container}>
-        <h1 className={styles.title}>{title}</h1>
         {/* <p>{loading ? "Loading..." : null}</p> */}
         {entry.fields?.images.length > 0
           ? entry.fields?.images?.map((item: any, i: number) => {
@@ -42,8 +42,8 @@ const GalleryPage = (props: any) => {
                         loading="eager"
                         src={"https:" + item.fields.file.url}
                         alt={`Recent Image ${i}`}
-                        width={300}
-                        height={300}
+                        width={1000}
+                        height={800}
                         layout="responsive"
                         quality={100}
                         priority={true}
@@ -51,6 +51,7 @@ const GalleryPage = (props: any) => {
                         style={{
                           borderRadius: "0.2em",
                           boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
+                          objectFit: "contain",
                         }}
                         className={` ${styles["duration-700"]} ${
                           styles["ease-in-out"]
