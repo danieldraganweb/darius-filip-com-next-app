@@ -2,7 +2,6 @@
 @use './app/styles/utils/_mixins' as _mixins;
 @use './app/styles/base/_base' as _base;
 
-
 .main {
   width: 100%;
   max-width: 1100px;
@@ -16,45 +15,60 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-row: auto;
   grid-gap: 1em;
   flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  margin-bottom: 20em;
-  margin-top: 0.7em;
+  margin-bottom: 5em;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  transition: all 0.5s ease-in;
-  position: relative;
+  transition: all 0.5s ease-in-out;
 }
 
 .imgContainer {
-  
-  overflow: hidden;
   margin: 0 auto;
-  width: 100%;
+  margin-top: 0.7em;
   
-
+  
   li{
     list-style: none;
     margin: 0 auto;
     padding: 0;
   }
-  
+  &:hover {
+    transform: scale(1.000.01);
+    transition: all 0.3s ease-out;
+    transition-duration: 1000ms;
+  }
+
   ul{
     margin: 0 auto;
     padding: 0;
     border-radius: 0.2em;
   }
- 
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.2em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-out;
+    }
+  }
 }
 
-
-.title{
+.title {
   font-size: clamp(1.5rem, 5vw, 1.8rem);
   font-weight: 300;
   margin-bottom: 0.5em;
@@ -69,104 +83,103 @@
   margin: 0 auto;
   padding: 0.5em;
   border-radius: 0.2em;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   letter-spacing: 0.2em;
   border: 1px solid $thirteenth-color;
-  
 }
 
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-.opacity-0 {
-  opacity: 0;
-}
 
-.duration-300 {
-  transition-duration: 2000ms;
-}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  border-radius: 0.2em;
 
-.ease-in-out {
-  transition-timing-function: ease-in-out;
-}
-
-// .object-contain {
-//   object-fit: contain;
-// }
-
-// .duration-700 {
-//   transition-duration: 1300ms;
-// }
-
-// .ease-in-out {
-//   transition-timing-function: ease-in-out;
-// }
-
-// .group-hover\:opacity-75:hover {
-//   transition: all 0.5s ease-in-out;
-// }
-
-// .scale-110 {
-//   transform: scale(1.1);
-// }
-
-// .blur-2xl {
-//   filter: blur(16px);
-// }
-
-// .grayscale {
-//   filter: blur(70%);
-// }
-
-// .scale-100 {
-//   transform: scale(1);
-// }
-
-// .blur-0 {
-//   filter: blur(1);
-// }
-
-// .grayscale-0 {
-//   filter: grayscale(0);
-// }
-
-
-@media screen and (max-width: 800px) {
-  .main {
-    width: 100%;
-    max-width: 1100px;
-   
+  .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
   }
-  .container{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1100px;
-    margin-bottom: 5em;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  .opacity-0 {
+    opacity: 0;
+  }
   
+  .duration-300 {
+    transition-duration: 500ms;
+  }
+  
+  .ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+}
+
+.modalContent {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  max-width: 1100px;
+  max-height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.modalImage {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.2em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+  .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  .opacity-0 {
+    opacity: 0;
+  }
+  
+  .duration-300 {
+    transition-duration: 2000ms;
+  }
+  
+  .ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .imgContainer {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: hidden;
+    margin-top: 0.5em;
   }
-}
-.title{
-  
-  font-weight: 300;
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
-  text-align: center;
-  font-family: $primary-font;
-  top: 0;
-}
 
-
+  .title {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+  }
+  .modal{
+    display: none;
+  }
+  .imgContainer .img  {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.2em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+}

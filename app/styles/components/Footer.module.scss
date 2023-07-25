@@ -12,16 +12,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
     font-family: $primary-font;
-
+    box-sizing: border-box;
     
 
     .copyright{
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        
        
         p{
             font-size: 2rem;
@@ -38,7 +37,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
+        
         p{
             font-size: 3rem;
             font-weight: 100;

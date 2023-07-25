@@ -15,8 +15,16 @@
     margin-top: 1em;
     box-shadow: 0 0 0.5em 0.1em rgba(0, 0, 0, 0.2);
     border-radius: 0.2em;
+    
   }
- 
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    
+  }
 
   .imgContainer {
     display: flex;
@@ -29,8 +37,9 @@
     border-radius: 0.2em;// 
     overflow: hidden;
     margin: 0 auto;
-    
+
   }
+ 
   .transition-opacity {
     transition-property: opacity;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,57 +50,12 @@
   }
   
   .duration-300 {
-    transition-duration: 2000ms;
+    transition-duration: 4500ms;
   }
   
   .ease-in-out {
     transition-timing-function: ease-in-out;
   }
-  // .object-contain {
-  //   object-fit: contain;
-  // }
-  
-  // .duration-700 {
-  //   transition-duration: 1300ms;
-  // }
-  
-  // .ease-in-out {
-  //   transition-timing-function: ease-in-out;
-  // }
-  
-  // .group-hover\:opacity-75:hover {
-  //   transition: all 0.5s ease-in-out;
-  // }
-  
-  // .scale-110 {
-  //   transform: scale(1.1);
-  // }
-  
-  // .blur-2xl {
-  //   filter: blur(16px);
-  // }
-  
-  // .grayscale {
-  //   filter: blur(70%);
-  // }
-  
-  // .scale-100 {
-  //   transform: scale(1);
-  // }
-  
-  // .blur-0 {
-  //   filter: blur(1);
-  // }
-  
-  // .grayscale-0 {
-  //   filter: grayscale(0);
-  // }
-
-  // // .imgContainer:hover {
-  // //     transition: all 0.2s ease-in-out;
-  // //     transform: scale(0.99);
-  // // }
-
 
   @media screen and (max-width: 800px) {
     .main {

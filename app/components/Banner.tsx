@@ -60,8 +60,8 @@ export default function Banner() {
             alt="Banner Image"
             quality={100}
             width={1100}
-            height={isMobile ? 580 : isTablet ? 600 : 700}
-            layout="responsive"
+            height={isMobile ? 580 : isTablet ? 600 : 730}
+            // layout="responsive"
             loading="lazy"
             style={{
               borderRadius: "0.2em",
