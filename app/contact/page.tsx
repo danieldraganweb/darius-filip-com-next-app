@@ -9,7 +9,6 @@ export default function Contact() {
   return (
     <main>
       <div className={styles.container}>
-        <h1></h1>
         <ContactForm />
       </div>
     </main>
