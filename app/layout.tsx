@@ -1,6 +1,7 @@
+import React from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import styles from "./styles/pages/page.module.scss";
+import styles from "../styles/pages/page.module.scss";
 import { Suspense } from "react";
 import Loading from "./loading";
 
@@ -15,13 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body>
-        <div className={styles.container}>
-          <Navbar />
-          <Suspense fallback={<Loading />}>{children}</Suspense>
-          <Footer />
-        </div>
+        <Navbar />
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+        <Footer />
       </body>
     </html>
   );

@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/components/Navbar.module.scss";
-import InstagramSVG from "./InstagramSVG";
 import Header from "./Header";
 import Logo from "./Logo";
 
@@ -19,9 +18,6 @@ const Navbar: React.FC = () => {
         <div className={styles.main}>
           <nav className={styles.navbar}>
             <div className={styles.header}>
-              <div className={styles.InstagramSVG}>
-                <InstagramSVG />
-              </div>
               <div className={styles.logo}>
                 <Logo />
                 <Header />
