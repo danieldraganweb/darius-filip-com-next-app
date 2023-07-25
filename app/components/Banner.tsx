@@ -3,15 +3,10 @@
 import styles from "../styles/components/Banner.module.scss";
 import { useState, useEffect, use } from "react";
 import Image from "next/image";
-import { createClient } from "contentful";
+import { client } from "../lib/contentful/client";
 import { useMediaQuery } from "react-responsive";
 // import { Entry } from "../types";
 // import { useEntry } from "../series/[slug]/page";
-
-const client = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || "",
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN || "",
-});
 
 export default function Banner() {
   const [randomImage, setRandomImage] = useState("");
@@ -67,7 +62,7 @@ export default function Banner() {
             width={1100}
             height={isMobile ? 580 : isTablet ? 600 : 670}
             priority={true}
-            blurDataURL="/main-img-1.jpg"
+            // loading="lazy"
             style={{
               borderRadius: "0.2em",
               boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",

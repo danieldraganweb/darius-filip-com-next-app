@@ -44,8 +44,8 @@ export default function Recent() {
                   height={800}
                   layout="responsive"
                   quality={100}
-                  priority={true}
-                  blurDataURL="/main-img-1.jpg"
+                  onLoad={() => setLoading(false)}
+                  blurDataURL={src}
                   style={{
                     borderRadius: "0.2em",
                     boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
