@@ -53,13 +53,19 @@ const GalleryPage = (props: any) => {
                           boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
                           objectFit: "contain",
                         }}
-                        className={` ${styles["duration-700"]} ${
-                          styles["ease-in-out"]
-                        } ${styles["group-hover:opacity-75"]} ${
-                          loading
-                            ? `${styles["scale-110"]} ${styles["blur-2xl"]} ${styles["grayscale"]}`
-                            : `${styles["scale-100"]} ${styles["blur-0"]} ${styles["grayscale-0"]}`
-                        }`}
+                        className={` ${styles["transition-opacity"]} ${
+                          styles["opacity-0"]
+                        } ${styles["transition-timing-function"]} ${
+                          styles["duration-300"]
+                        } ${styles["ease-in-out"]}
+                                  ${
+                                    loading
+                                      ? styles["opacity-0"]
+                                      : styles["opacity-100"]
+                                  }`}
+                        onLoadingComplete={(src) =>
+                          src.classList.remove(styles["opacity-0"])
+                        }
                       />
                     </li>
                   </ul>
