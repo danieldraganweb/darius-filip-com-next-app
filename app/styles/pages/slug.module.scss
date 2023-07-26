@@ -28,6 +28,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   transition: all 0.5s ease-in-out;
+  margin-top: 1em;
 }
 
 .imgContainer {
@@ -84,6 +85,9 @@
     }
   }
 }
+.titleContainer {
+  margin-top: 0.7em;
+}
 
 .title {
   font-size: clamp(1.5rem, 5vw, 1.8rem);
@@ -103,6 +107,7 @@
   box-sizing: border-box;
   letter-spacing: 0.2em;
   border: 1px solid $thirteenth-color;
+
   .transition-opacity {
     transition-property: opacity;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

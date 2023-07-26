@@ -43,15 +43,17 @@ const GalleryPage = (props: any) => {
 
   return (
     <main className={styles.main}>
-      <h1
-        className={`${styles.title} ${styles["transition-opacity"]} ${
-          styles["opacity-0"]
-        } ${styles["transition-timing-function"]} ${styles["duration-300"]} ${
-          styles["ease-in-out"]
-        }${loading ? styles["opacity-0"] : styles["opacity-100"]}}`}
-      >
-        {title}
-      </h1>
+      <div className={styles.titleContainer}>
+        <h1
+          className={`${styles.title} ${styles["transition-opacity"]} ${
+            styles["opacity-0"]
+          } ${styles["transition-timing-function"]} ${styles["duration-300"]} ${
+            styles["ease-in-out"]
+          }${loading ? styles["opacity-0"] : styles["opacity-100"]}}`}
+        >
+          {title}
+        </h1>
+      </div>
       <div className={styles.container}>
         {entry.fields?.images.length > 0
           ? entry.fields?.images?.map((item: any, i: number) => {
