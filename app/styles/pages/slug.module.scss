@@ -79,10 +79,10 @@
     
     cursor: pointer;
 
-    &:hover {
-      transform: scale(1.05);
-      transition: all 0.3s ease-out;
-    }
+    // &:hover {
+    //   transform: scale(1.05);
+    //   transition: all 0.3s ease-out;
+    // }
   }
 }
 .titleContainer {
@@ -174,15 +174,12 @@
     font-size: clamp(1.2rem, 5vw, 1.5rem);
   }
   .modal{
-    display: none;
+    padding: 1em;
   }
-  .imgContainer .img  {
+  .modalImage{
     width: 100%;
     height: auto;
-    object-fit: cover;
-    border-radius: 0.2em;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-out;
-    cursor: pointer;
+  }
+
 }
-}
+
