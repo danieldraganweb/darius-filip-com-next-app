@@ -46,7 +46,14 @@ export default function Recent() {
       <div className={styles.container}>
         {imagesRecent.map((src: string, i: number) => (
           <div key={i} className={styles.imgContainer}>
-            <ul className={styles.imgList}>
+            <ul
+              className={` ${styles["transition-opacity"]} ${
+                styles["opacity-0"]
+              } ${styles["transition-timing-function"]} ${
+                styles["duration-300"]
+              } ${styles["ease-in-out"]}
+                ${loading ? styles["opacity-0"] : styles["opacity-100"]}`}
+            >
               <li className={styles.imgItem}>
                 <Image
                   loading="lazy"
@@ -54,7 +61,6 @@ export default function Recent() {
                   alt={`Recent Image ${i}`}
                   width={1000}
                   height={800}
-                  layout="responsive"
                   quality={100}
                   blurDataURL={src}
                   style={{
@@ -63,13 +69,6 @@ export default function Recent() {
                     objectFit: "cover",
                   }}
                   onLoadStart={() => setLoading(true)}
-                  className={` ${styles["transition-opacity"]} ${
-                    styles["opacity-0"]
-                  } ${styles["transition-timinh-function"]} ${
-                    styles["duration-2s"]
-                  } ${styles["ease-in-out"]} ${
-                    loading ? styles["opacity-0"] : styles["opacity-100"]
-                  }`}
                   onLoadingComplete={() => setLoading(false)}
                   onClick={() => handleImageClick(src)}
                 />
@@ -89,21 +88,12 @@ export default function Recent() {
               height={800}
               quality={100}
               blurDataURL={selectedImage}
-              layout="responsive"
+              // layout="responsive"
               style={{
                 borderRadius: "0.2em",
                 boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
                 objectFit: "contain",
               }}
-              className={` ${styles["transition-opacity"]} ${
-                styles["opacity-0"]
-              } ${styles["transition-timing-function"]} ${
-                styles["duration-300"]
-              } ${styles["ease-in-out"]}
-                ${loading ? styles["opacity-0"] : styles["opacity-100"]}`}
-              onLoadingComplete={(src) =>
-                src.classList.remove(styles["opacity-0"])
-              }
             />
           </div>
         </div>

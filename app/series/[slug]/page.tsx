@@ -43,13 +43,37 @@ const GalleryPage = (props: any) => {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>{title}</h1>
+      <h1
+        className={`${styles.title} ${styles["transition-opacity"]} ${
+          styles["opacity-0"]
+        } ${styles["transition-timing-function"]} ${styles["duration-300"]} ${
+          styles["ease-in-out"]
+        }
+                            ${
+                              loading
+                                ? styles["opacity-0"]
+                                : styles["opacity-100"]
+                            }`}
+      >
+        {title}
+      </h1>
       <div className={styles.container}>
         {entry.fields?.images.length > 0
           ? entry.fields?.images?.map((item: any, i: number) => {
               return (
                 <div key={i} className={styles.imgContainer}>
-                  <ul className={styles.imgList}>
+                  <ul
+                    className={` ${styles["transition-opacity"]} ${
+                      styles["opacity-0"]
+                    } ${styles["transition-timing-function"]} ${
+                      styles["duration-300"]
+                    } ${styles["ease-in-out"]}
+                            ${
+                              loading
+                                ? styles["opacity-0"]
+                                : styles["opacity-100"]
+                            }`}
+                  >
                     <li className={styles.imgItem}>
                       <Image
                         loading="lazy"
@@ -64,16 +88,6 @@ const GalleryPage = (props: any) => {
                           boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
                           objectFit: "contain",
                         }}
-                        className={` ${styles["transition-opacity"]} ${
-                          styles["opacity-0"]
-                        } ${styles["transition-timing-function"]} ${
-                          styles["duration-300"]
-                        } ${styles["ease-in-out"]}
-                            ${
-                              loading
-                                ? styles["opacity-0"]
-                                : styles["opacity-100"]
-                            }`}
                         onLoadingComplete={(src) =>
                           src.classList.remove(styles["opacity-0"])
                         }
@@ -103,15 +117,6 @@ const GalleryPage = (props: any) => {
                 boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
                 objectFit: "contain",
               }}
-              className={` ${styles["transition-opacity"]} ${
-                styles["opacity-0"]
-              } ${styles["transition-timing-function"]} ${
-                styles["duration-300"]
-              } ${styles["ease-in-out"]}
-                ${loading ? styles["opacity-0"] : styles["opacity-100"]}`}
-              onLoadingComplete={(src) =>
-                src.classList.remove(styles["opacity-0"])
-              }
             />
           </div>
         </div>
