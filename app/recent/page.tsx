@@ -42,7 +42,9 @@ export default function Recent() {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>Recent</h1>
+      <div className={styles.titleContainer}>
+        <h1 className={styles.title}>Recent</h1>
+      </div>
       <div className={styles.container}>
         {imagesRecent.map((src: string, i: number) => (
           <div key={i} className={styles.imgContainer}>
@@ -57,6 +59,7 @@ export default function Recent() {
               <li className={styles.imgItem}>
                 <Image
                   loading="lazy"
+                  layout="responsive"
                   src={src}
                   alt={`Recent Image ${i}`}
                   width={1000}
@@ -65,8 +68,13 @@ export default function Recent() {
                   blurDataURL={src}
                   style={{
                     borderRadius: "0.2em",
-                    boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
                     objectFit: "cover",
+                    boxShadow: `0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                    0 12.5px 10px rgba(0, 0, 0, 0.06),
+                    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                    0 100px 80px rgba(0, 0, 0, 0.12)`,
                   }}
                   onLoadStart={() => setLoading(true)}
                   onLoadingComplete={() => setLoading(false)}
