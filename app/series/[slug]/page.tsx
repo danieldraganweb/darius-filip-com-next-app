@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import styles from "../../styles/pages/slug.module.scss";
 import Image from "next/image";
 import { client } from "../../lib/contentful/client";
-import { AllEntries, Item } from "../../types";
+import { Item } from "../../types";
 
 // Fetch Galleries
 
