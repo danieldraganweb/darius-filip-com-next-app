@@ -97,22 +97,28 @@
 
     }
     
+    li {
+      margin-bottom: 1rem;
+      text-decoration: none;
+      list-style: none;
+    }
+    
   }
-    .navLinks a:hover {
-      color: $secondary-color;
-      transition: all 0.3s ease-in-out;
+  
+  .navLinks a:hover {
+    color: $secondary-color;
+    transition: all 0.3s ease-in-out;
       
-    }
-    .navLinks a:active {
-      color: $fourteenth-color;
-      transition: all 0.8s ease-in-out;
-    }
-
+  }
+  
+  .navLinks a:active {
+    color: $fourteenth-color;
+    transition: all 0.8s ease-in-out;
+  }
 
   .InstagramSVG{
     display: none;
   }
-
 
   @media screen and (max-width: 800px) {
     .hamburger{
@@ -190,13 +196,12 @@
       display: none;
     }
 
-      li {
-        margin-bottom: 1rem;
-        text-decoration: none;
-        list-style: none;
-      }
+    li {
+      margin-bottom: 1rem;
+      text-decoration: none;
+      list-style: none;
     }
-
+    
     a {
       text-decoration: none;
       color: $primary-text-color;
@@ -210,9 +215,8 @@
     
   }
 
-    .logo {
-      font-size: $font-size-normal;
-      text-decoration: none;
-    }
-  
-
+  .logo {
+    font-size: $font-size-normal;
+    text-decoration: none;
+  }
+}

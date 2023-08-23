@@ -51,7 +51,7 @@ export default function Gallery() {
                     blurDataURL="/main-img-1.jpg"
                     style={{
                       borderRadius: "0.2em",
-                      boxShadow: "20 0 20px rgba(0, 0, 0, 0.2)",
+                      boxShadow: "0 0 0.5em 0.1em rgba(0, 0, 0, 0.2)",
                     }}
                     className={` ${styles["duration-700"]} ${styles["ease-in-out"]}`}
                     onLoadingComplete={() => setLoading(false)}
