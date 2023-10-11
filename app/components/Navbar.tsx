@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "../styles/components/Navbar.module.scss";
 import Header from "./Header";
 import Logo from "./Logo";
+import disableScroll from "disable-scroll";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +12,15 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // Disable scrolling when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      disableScroll.on();
+    } else {
+      disableScroll.off();
+    }
+  }, [menuOpen]);
 
   return (
     <>
